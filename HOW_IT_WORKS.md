@@ -212,4 +212,4 @@ files, rather than the traditional approach of embedding the javascript
 code inside the Node-RED flows file. Several sample javascript files
 have been added to this repository.
 
-![Node-RED Flows](images/flows.jpg)
+![Node-RED Flows](images/flows-1.jpg)
