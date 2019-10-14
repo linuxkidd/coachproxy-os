@@ -20,7 +20,7 @@
 # a name from lower case to upper case, can have an impact on tools
 # that have been written to use the mqtt output generated from this
 # spec file.
-API_VERSION: 0
+API_VERSION: 1
 
 17F00:
   name: GENERAL_RESET

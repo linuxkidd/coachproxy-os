@@ -103,6 +103,13 @@ to the MQTT bus:
 }
 ```
 
+Since other tools use the mqtt outputs of the script, the decoder spec
+is versioned so that any changes to the output can be tracked and
+downstream scripts can be updated.
+
+`rvc2mqtt.pl` publishes (and retains) the current API version on mqtt
+topic `RVC/API_VERSION`.
+
 Sending RV-C Messages to CANbus
 -----------------------------------
 
