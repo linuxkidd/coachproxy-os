@@ -23,12 +23,12 @@ mode power supply) will enable the RPi to be powered by the CAN Bus
 network, eliminating the need for a separate power supply. Searching the
 web for `PiCAN2 SMPS` should yield suitable results.
 
-The CoachProxyOS software is designed around a dual WiFi Adapter system.
-CoachProxyOS uses the RPi's internal WiFi as a private access point,
-suitable for connecting directly to the device for initial
-configuration. It also uses a secondary USB WiFi adapter (the Edimax
-EW-7811Un) to connect to a local WiFi network in the motorhome (a
-router, hotspot, phone, etc.).
+For connection to a Tiffin motorhome, a 4-conductor CAN Bus cable will
+need to be connected to the PiCAN2 board, and a
+[3M Mini-Clamp Plug](https://www.digikey.com/product-detail/en/3m/37104-2165-000%20FL%20100/3M155844-ND/1238214)
+connector added to the other end of the cable. This connector can plug
+into the Tiffin network panel, usually in the bedroom, bathroom, or
+closet of the RV.
 
 3rd Party Software
 ------------------

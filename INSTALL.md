@@ -50,7 +50,8 @@ CoachProxyOS Ansible Playbook
 -----------------------------
 
 Run the `coachproxyos.yml` playbook to perform the majority of the
-installation and configuration:
+installation and configuration. The install will take 20-40 minutes
+and will download quite a bit of data over your Internet connection.
 
 ```
 $ ansible-playbook coachproxyos.yml
@@ -71,6 +72,6 @@ Linux server:
 
 ```
 sudo umount /dev/mmcblk0p1 /dev/mmcblk0p2
-sudo dd bs=4M if=/dev/mmcblk0 of=coachproxyos_4.x.img
+sudo dd bs=4M if=/dev/mmcblk0 of=coachproxyos_1.0.img
 ```
 
