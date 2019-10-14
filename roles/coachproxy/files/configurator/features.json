@@ -1,0 +1,1993 @@
+{
+  "Comments": {
+    "Light and Shade Groups": {
+      "DS": "Driver Side", "PS": "Passenger Side", "M": "Main", "MB": "Mid Bath",
+      "BR": "Bedroom", "RB": "Rear Bath", "C": "Closet", "E": "Exterior Lights",
+      "LR": "Living Room", "G": "Galley", "H": "Hall", "AW": "Awnings",
+      "GS": "General Shades", "CS": "Cockpit Shades", "MS": "Main Shades", "BS": "Bedroom Shades"
+    }
+  },
+
+  "2019": {
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Dash Accent", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "M", "order": 17 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent 1", "location": "M", "order": 22 },
+          "20": { "name": "Accent 2", "location": "M", "order": 25 },
+          "21": { "name": "Accent", "location": "BR", "order": 40 },
+          "28": { "name": "Ceiling", "location": "C", "order": 5 },
+          "73": { "name": "Awning", "location": "E", "order": 15 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "76": { "name": "Slide Box", "location": "E", "order": 25 },
+          "85": { "name": "Undercoach", "location": "E", "order": 35 },
+          "86": { "name": "Windshield", "location": "E", "order": 40 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "14": { "name": "Toll", "location": "CS", "order": 2 },
+          "15": { "name": "Windshield", "location": "CS", "order": 1 },
+          "16": { "name": "Passenger", "location": "CS", "order": 3 },
+          "17": { "name": "Entry", "location": "CS", "order": 4 , "single": "night" },
+          "1": { "name": "P/S Dine", "location": "MS", "order": 1, "voicename": "Dining" },
+          "6": { "name": "D/S Front", "location": "MS", "order": 2, "voicename": "Front" },
+          "7": { "name": "D/S Sofa", "location": "MS", "order": 3, "voicename": "Sofa" },
+          "8": { "name": "D/S Rear", "location": "MS", "order": 4, "voicename": "Rear" },
+          "23": { "name": "Galley", "location": "MS", "order": 5 , "single": "night" },
+          "1 6 7 8 14 15 16 17": { "name": "All", "location": "GS", "order": 1, "voiceid": 250 },
+          "14 15 16 17": { "name": "Cockpit", "location": "GS", "order": 2, "voiceid": 251 },
+          "1 6 7 8": { "name": "Main", "location": "GS", "order": 3, "voiceid": 252 }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 22 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Locks": {
+          "cargo": [123, 124],
+          "entry": [127, 128]
+        },
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "37_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": ""
+        }
+      },
+      "40_IP": {
+        "Lights": {
+        },
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_MP": {
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OPP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      }
+    },
+
+    "_comment": "2019",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 10 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "16": { "name": "Vanity", "location": "MB", "order": 20 },
+          "17": { "name": "Vanity", "location": "RB", "order": 20 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "28": { "name": "Ceiling", "location": "C", "order": 30 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "85": { "name": "Undercoach", "location": "E", "order": 35 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "15": { "name": "Windshield", "location": "CS", "order": 1 },
+          "23": { "name": "Galley", "location": "MS", "order": 5 , "single": "night" }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 22 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Locks": {
+          "cargo": [123, 124],
+          "entry": [127, 128]
+        },
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "37_BH": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_IH": {
+        "Lights": {
+          "5": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_QBH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "18": { "name": "Hutch Accent" },
+          "28": ""
+        }
+      },
+      "40_QKH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": ""
+        }
+      },
+      "44_OH": { }
+    },
+
+    "_comment": "2019",
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 20 },
+          "6": { "name": "Accent", "location": "DS", "order": 20 },
+          "7": { "name": "Accent", "location": "PS", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 15 },
+          "9": { "name": "Sconce", "location": "DS", "order": 20 },
+          "10": { "name": "Accent", "location": "M", "order": 11 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "PS", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "16": { "name": "Vanity", "location": "MB", "order": 1 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "28": { "name": "Ceiling", "location": "C", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Shades": {
+          "4": { "name": "Galley", "location": "MS", "order": 1, "single": "night" }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "33_AA": {
+        "Lights": {
+          "13": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "37_BA": {
+        "Lights": {
+          "6": "",
+          "7": "",
+          "16": "",
+          "28": ""
+        }
+      },
+      "37_PA": {
+        "Lights": {
+          "13": "",
+          "16": "",
+          "28": ""
+        }
+      }
+    },
+
+    "_comment": "2019",
+    "Allegro_Breeze": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 20 },
+          "6": { "name": "Accent", "location": "DS", "order": 20 },
+          "7": { "name": "Accent", "location": "PS", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 15 },
+          "9": { "name": "Sconce", "location": "PS", "order": 20 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "14": { "name": "Task", "location": "PS", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "28": { "name": "Ceiling", "location": "C", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Awnings": {
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "31_BR": { },
+      "33_BR": { }
+    },
+
+    "_comment": "2019",
+    "Allegro_Open_Road": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 30 },
+          "2": { "name": "Entry", "location": "M", "order": 20 },
+          "3": { "name": "Task", "location": "PS", "order": 10 },
+          "4": { "name": "Hall", "location": "M", "order": 40 },
+          "5": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "6": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "7": { "name": "Ceiling", "location": "RB", "order": 10 },
+          "8": { "name": "Floor", "location": "M", "order": 10 },
+          "9": { "name": "Dinette", "location": "DS", "order": 10 },
+          "10": { "name": "Sconce", "location": "DS", "order": 20 },
+          "11": { "name": "TV Accent", "location": "M", "order": 50 },
+          "12": { "name": "Awning", "location": "E", "order": 30 },
+          "94": { "name": "Porch", "location": "E", "order": 20 }
+        },
+        "Shades": {
+          "3": { "name": "Galley", "location": "MS", "order": 1, "single": "night" }
+        },
+        "Awnings": {
+          "22": { "name": "Patio", "type": "day", "order": 1, "duration": 22 }
+        },
+        "Vents": {
+          "galley": { "fan": 23, "lidup": 21, "liddn": 22 },
+          "mid": { "fan": 19, "lidup": 17, "liddn": 18 },
+          "rear": { "fan": 15, "lidup": 13, "liddn": 14 }
+        },
+        "Pump": 93,
+        "Elecheat": 95,
+        "Fuelheat": 96,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "32_SA": {
+        "Lights": {
+          "7": "",
+          "11": ""
+        }
+      },
+      "34_PA": {
+        "Lights": {
+          "7": ""
+        }
+      },
+      "36_LA": {
+        "Lights": {
+          "11": ""
+        }
+      },
+      "36_UA": { }
+    },
+
+    "_comment": "2019",
+    "VanLeigh_Beacon": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Reading", "location": "BR", "order": 20 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Sconce", "location": "LR", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "16": { "name": "Ceiling", "location": "FB", "order": 10 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Front", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Rear", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 33, "lidup": 34, "liddn": 35 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 28,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "39_FBB": { }
+    }
+  },
+
+
+  "2018": {
+    "Zephyr": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Dash Accent", "location": "M", "order": 18 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 15 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Ceiling Accent", "location": "M", "order": 20 },
+          "20": { "name": "Front Accent", "location": "M", "order": 25 },
+          "21": { "name": "Accent", "location": "BR", "order": 40 },
+          "28": { "name": "Ceiling", "location": "C", "order": 5 },
+          "73": { "name": "Awning", "location": "E", "order": 15 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "76": { "name": "Slide Box", "location": "E", "order": 25 },
+          "85": { "name": "Undercoach", "location": "E", "order": 35 },
+          "86": { "name": "Windshield", "location": "E", "order": 40 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "14": { "name": "Toll", "location": "CS", "order": 2 },
+          "15": { "name": "Windshield", "location": "CS", "order": 1 },
+          "16": { "name": "Passenger", "location": "CS", "order": 3 },
+          "17": { "name": "Entry", "location": "CS", "order": 4, "single": "night" },
+          "1": { "name": "D/S Sofa", "location": "MS", "order": 1, "voicename": "Driver Sofa" },
+          "7": { "name": "P/S Sofa", "location": "MS", "order": 3, "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "location": "MS", "order": 4, "voicename": "Dining" },
+          "10": { "name": "Fore", "location": "BS", "order": 1, "voicename": "Bed Front" },
+          "11": { "name": "Aft", "location": "BS", "order": 2, "voicename": "Bed Rear" },
+          "12": { "name": "Vanity", "location": "BS", "order": 3, "voicename": "Vanity" },
+          "13": { "name": "Headboard", "location": "BS", "order": 4, "voicename": "Headboard" },
+          "1 7 8 10 11 12 13 14 15 16 17": { "name": "All", "location": "GS", "order": 1, "voiceid": 250 },
+          "14 15 16 17": { "name": "Cockpit", "location": "GS", "order": 2, "voiceid": 251 },
+          "1 7 8": { "name": "Main", "location": "GS", "order": 3, "voiceid": 252 },
+          "10 11 12 13": { "name": "Bedroom", "location": "GS", "order": 4, "voiceid": 253 }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 },
+          "19": { "name": "Main", "type": "day", "order": 2, "duration": 30 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Locks": 1,
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "45_OZ": { },
+      "45_PZ": { }
+    },
+
+    "_comment": "2018",
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "M", "order": 17 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent 1", "location": "M", "order": 22 },
+          "20": { "name": "Accent 2", "location": "M", "order": 25 },
+          "21": { "name": "Accent", "location": "BR", "order": 40 },
+          "28": { "name": "Ceiling", "location": "C", "order": 5 },
+          "73": { "name": "Awning", "location": "E", "order": 15 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "76": { "name": "Slide Box", "location": "E", "order": 25 },
+          "85": { "name": "Undercoach", "location": "E", "order": 35 },
+          "86": { "name": "Windshield", "location": "E", "order": 40 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "14": { "name": "Toll", "location": "CS", "order": 2 },
+          "15": { "name": "Windshield", "location": "CS", "order": 1 },
+          "16": { "name": "Passenger", "location": "CS", "order": 3 },
+          "17": { "name": "Entry", "location": "CS", "order": 4 , "single": "night" },
+          "1": { "name": "P/S Dine", "location": "MS", "order": 1, "voicename": "Dining" },
+          "6": { "name": "D/S Front", "location": "MS", "order": 2, "voicename": "Front" },
+          "7": { "name": "D/S Sofa", "location": "MS", "order": 3, "voicename": "Sofa" },
+          "8": { "name": "D/S Rear", "location": "MS", "order": 4, "voicename": "Rear" },
+          "1 6 7 8 14 15 16 17": { "name": "All", "location": "GS", "order": 1, "voiceid": 250 },
+          "14 15 16 17": { "name": "Cockpit", "location": "GS", "order": 2, "voiceid": 251 },
+          "1 6 7 8": { "name": "Main", "location": "GS", "order": 3, "voiceid": 252 }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Locks": 1,
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+
+      },
+      "37_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": ""
+        }
+      },
+      "40_SP": {
+        "Lights": {
+          "5": "",
+          "28": ""
+        },
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_MP": {
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OP": {
+        "Lights": {
+          "5": ""
+        },
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OPP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "1": { "name": "D/S Sofa", "voicename": "Driver Sofa" },
+          "6": "",
+          "7": { "name": "P/S Sofa", "voicename": "Passenger Sofa" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      }
+    },
+
+    "_comment": "2018",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 10 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "16": { "name": "Vanity", "location": "MB", "order": 20 },
+          "17": { "name": "Vanity", "location": "RB", "order": 20 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "28": { "name": "Ceiling", "location": "C", "order": 30 },
+          "73": { "name": "Awning", "location": "E", "order": 15 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "15": { "name": "Windshield", "location": "CS", "order": 1 }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "36_GH": {
+        "Lights": {
+          "5": "",
+          "13": { "name": "Sink Ceiling", "location": "MB", "order": 30 },
+          "17": { "name": "Sink Vanity", "location": "MB", "order": 40 },
+          "18": "",
+          "28": ""
+        }
+      },
+      "37_BH": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_IH": {
+        "Lights": {
+          "5": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_QBH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "18": { "name": "Hutch Accent" },
+          "28": ""
+        }
+      },
+      "40_QKH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": ""
+        }
+      },
+      "44_OH": { }
+    },
+
+    "_comment": "2018",
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Slide", "location": "PS", "order": 5 },
+          "4": { "name": "Slide", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 15 },
+          "9": { "name": "Sconce", "location": "DS", "order": 20 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "PS", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "16": { "name": "Vanity", "location": "MB", "order": 1 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "33_AA": {
+        "Lights": {
+          "13": "",
+          "16": "",
+          "18": ""
+        }
+      },
+      "37_BA": {
+        "Lights": {
+          "16": ""
+        }
+      },
+      "37_PA": {
+        "Lights": {
+          "13": "",
+          "16": ""
+        }
+      },
+      "38_QBA": {
+        "Lights": {
+          "6": "",
+          "7": "",
+          "13": "",
+          "16": "",
+          "18": ""
+        }
+      },
+      "38_QRA": { }
+    },
+
+    "_comment": "2018",
+    "Allegro_Breeze": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Slide", "location": "PS", "order": 5 },
+          "4": { "name": "Slide", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 15 },
+          "9": { "name": "Sconce", "location": "DS", "order": 20 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "14": { "name": "Task", "location": "PS", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "31_BR": { },
+      "33_BR": { }
+    },
+
+    "_comment": "2018",
+    "Allegro_Open_Road": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 30 },
+          "2": { "name": "Entry", "location": "M", "order": 20 },
+          "3": { "name": "Task", "location": "PS", "order": 10 },
+          "4": { "name": "Hall", "location": "M", "order": 40 },
+          "5": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "6": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "7": { "name": "Ceiling", "location": "RB", "order": 10 },
+          "8": { "name": "Floor", "location": "M", "order": 10 },
+          "9": { "name": "Dinette", "location": "DS", "order": 10 },
+          "10": { "name": "Sconce", "location": "DS", "order": 20 },
+          "11": { "name": "TV Accent", "location": "M", "order": 50 },
+          "12": { "name": "Awning", "location": "E", "order": 30 },
+          "94": { "name": "Porch", "location": "E", "order": 20 }
+        },
+        "Awnings": {
+          "22": { "name": "Patio", "type": "day", "order": 1, "duration": 20  }
+        },
+        "Vents": {
+          "galley": { "fan": 23, "lidup": 21, "liddn": 22 },
+          "mid": { "fan": 19, "lidup": 17, "liddn": 18 },
+          "rear": { "fan": 15, "lidup": 13, "liddn": 14 }
+        },
+        "Pump": 93,
+        "Elecheat": 95,
+        "Fuelheat": 96,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 0
+      },
+      "31_MA": {
+        "Lights": {
+          "3": { "location": "DS" },
+          "7": ""
+        }
+      },
+      "32_SA": {
+        "Lights": {
+          "7": "",
+          "11": ""
+        }
+      },
+      "34_PA": {
+        "Lights": {
+          "7": ""
+        }
+      },
+      "35_QBA": {
+        "Lights": {
+          "7": ""
+        }
+      },
+      "36_LA": {
+        "Lights": {
+          "11": ""
+        }
+      },
+      "36_UA": { }
+    },
+
+    "_comment": "2018",
+    "Wayfarer": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 20 },
+          "2": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "3": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "4": { "name": "Task", "location": "M", "order": 30 },
+          "5": { "name": "Reading", "location": "M", "order": 50 },
+          "6": { "name": "Reading", "location": "BR", "order": 20 },
+          "8": { "name": "Accent", "location": "M", "order": 40 },
+          "14": { "name": "Awning", "location": "E", "order": 10 },
+          "15": { "name": "Porch", "location": "E", "order": 20 },
+          "16": { "name": "Hall", "location": "M", "order": 60 },
+          "21": { "name": "Entry", "location": "M", "order": 10 },
+          "23": { "name": "Cargo", "location": "E", "order": 30 },
+          "24": { "name": "Shower", "location": "MB", "order": 20 }
+        },
+        "Pump": 13,
+        "Elecheat": 0,
+        "Fuelheat": 0,
+        "Tankheat": 22,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "24_BW": { }
+    },
+
+    "_comment": "2018",
+    "VanLeigh_Vilano": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Ceiling", "location": "MB", "order": 5 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Reading", "location": "BR", "order": 25 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Pantry", "location": "G", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Bedroom Awning", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Living Room Awning", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 29,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "320_GK": {
+        "8": { "name": "Sofa" },
+        "11": "",
+        "12": { "name": "Sconce" }
+      }
+    }
+  },
+
+
+  "2017": {
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Shades": {
+          "4": { "name": "Entry", "location": "CS", "order": 1 , "single": "night" },
+          "3": { "name": "P/S", "location": "MS", "order": 1, "voicename": "Passenger" },
+          "6": { "name": "D/S Front", "location": "MS", "order": 2, "voicename": "Front" },
+          "7": { "name": "D/S Mid", "location": "MS", "order": 3, "voicename": "Middle" },
+          "8": { "name": "D/S Rear", "location": "MS", "order": 4, "voicename": "Rear" },
+          "3 6 7 8": { "name": "All Shades", "location": "GS", "order": 1, "voiceid": 250 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Locks": 1,
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "Preheat": 92,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "37_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_AP": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": ""
+        }
+      },
+      "40_SP": {
+        "Lights": {
+          "5": "",
+          "18": "",
+          "28": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OPP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      }
+    },
+
+    "_comment": "2017",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Awnings": {
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15  }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "Preheat": 92,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "36_GH": {
+        "Lights": {
+          "5": "",
+          "13": { "name": "Sink Ceiling", "location": "MB", "order": 30 },
+          "17": { "name": "Sink Vanity", "location": "MB", "order": 40 },
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "7": { "location": "DS" },
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_IH": {
+        "Lights": {
+          "5": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_QBH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "28": ""
+        }
+      },
+      "40_QKH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": "",
+          "28": ""
+        }
+      },
+      "44_OH": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        }
+      }
+    },
+
+    "_comment": "2017",
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Sconce", "location": "DS", "order": 15 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "PS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 10 }
+        },
+        "Awnings": {
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "33_AA": {
+        "Lights": {
+          "13": "",
+          "17": ""
+        }
+      },
+      "37_PA": {
+        "Lights": {
+          "13": "",
+          "17": ""
+        }
+      },
+      "38_QBA": {
+        "Lights": {
+          "6": "",
+          "13": "",
+          "17": ""
+        }
+      },
+      "38_QRA": { }
+    },
+
+    "_comment": "2017",
+    "Allegro_Open_Road": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Ceiling", "location": "M", "order": 15 },
+          "3": { "name": "Task", "location": "M", "order": 25 },
+          "4": { "name": "Hall", "location": "M", "order": 20 },
+          "5": { "name": "Entry", "location": "M", "order": 10 },
+          "6": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "8": { "name": "Floor", "location": "M", "order": 5 },
+          "23": { "name": "Porch", "location": "E", "order": 1 },
+          "24": { "name": "Awning", "location": "E", "order": 1 },
+          "34": { "name": "Dinette", "location": "M", "order": 30 },
+          "35": { "name": "Sconce", "location": "M", "order": 35 },
+          "36": { "name": "TV Accent", "location": "M", "order": 40 }
+        },
+        "Awnings": {
+          "18": { "name": "Patio", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 27, "lidup": 25, "liddn": 26, "indicator": 8 },
+          "mid": { "fan": 30, "lidup": 28, "liddn": 29, "indicator": 44 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 19,
+        "Elecheat": 22,
+        "Fuelheat": 21,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "31_MA": { },
+      "31_SA": {
+        "Lights": {
+          "34": "",
+          "35": "",
+          "36": ""
+        }
+      },
+      "32_SA": { },
+      "34_PA": { },
+      "35_QBA": { },
+      "36_LA": { },
+      "36_UA": { }
+    },
+
+    "_comment": "2017",
+    "VanLeigh_Vilano": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Ceiling", "location": "MB", "order": 5 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Reading", "location": "BR", "order": 25 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Pantry", "location": "G", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 27, "liddn": 26 },
+          "mid": { "fan": 29, "lidup": 31, "liddn": 30 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 33,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "365_RL": { },
+      "375_FL": { }
+    }
+  },
+
+
+  "2016": {
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "PS", "order": 15 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Sconce", "location": "DS", "order": 15 },
+          "10": { "name": "Reading", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Shades": {
+          "4": { "name": "Entry", "location": "CS", "order": 1 , "single": "night" },
+          "3": { "name": "P/S", "location": "MS", "order": 1, "voicename": "Passenger" },
+          "6": { "name": "D/S Front", "location": "MS", "order": 2, "voicename": "Front" },
+          "7": { "name": "D/S Mid", "location": "MS", "order": 3, "voicename": "Middle" },
+          "8": { "name": "D/S Rear", "location": "MS", "order": 4, "voicename": "Rear" },
+          "3 6 7 8": { "name": "All Shades", "location": "GS", "order": 1, "voiceid": 250 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Locks": 1,
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "Preheat": 92,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "37_AP": {
+        "Lights": {
+          "5": "",
+          "7": "",
+          "9": { "name": "Sconce", "location": "DS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_AP": {
+        "Lights": {
+          "9": { "location": "PS", "order": 15 },
+          "13": "",
+          "14": { "location": "PS", "order": 20 },
+          "17": ""
+        }
+      },
+      "40_SP": {
+        "Lights": {
+          "5": "",
+          "18": "",
+          "28": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_LP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_OP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_UP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        }
+      }
+    },
+
+    "_comment": "2016",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Awnings": {
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "36_GH": {
+        "Lights": {
+          "5": "",
+          "13": { "name": "Sink Ceiling", "location": "MB", "order": 30 },
+          "17": { "name": "Sink Vanity", "location": "MB", "order": 40 },
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "7": "",
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": ""
+        }
+      },
+      "40_QBH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "28": ""
+        }
+      },
+      "40_QKH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": ""
+        }
+      },
+      "42_LH": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        }
+      },
+      "44_OH": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        }
+      }
+    },
+
+    "_comment": "2016",
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "8": { "name": "Galley", "location": "PS", "order": 15 },
+          "9": { "name": "Sconce", "location": "M", "order": 15 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "PS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 10 }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "33_AA": {
+        "Lights": {
+          "13": ""
+        }
+      },
+      "37_PA": {
+        "Lights": {
+          "13": ""
+        }
+      },
+      "38_QBA": {
+        "Lights": {
+          "13": ""
+        }
+      },
+      "38_QRA": { }
+    },
+
+    "_comment": "2016",
+    "Allegro_Open_Road": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Ceiling", "location": "M", "order": 15 },
+          "3": { "name": "Task", "location": "M", "order": 25 },
+          "4": { "name": "Hall", "location": "M", "order": 20 },
+          "5": { "name": "Entry", "location": "M", "order": 10 },
+          "6": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "8": { "name": "Floor", "location": "M", "order": 5 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "34": { "name": "Dinette", "location": "M", "order": 30 },
+          "35": { "name": "Sconce", "location": "M", "order": 35 },
+          "36": { "name": "TV Accent", "location": "M", "order": 40 }
+        },
+        "Vents": {
+          "galley": { "fan": 27, "lidup": 25, "liddn": 26, "indicator": 8 },
+          "mid": { "fan": 30, "lidup": 28, "liddn": 29, "indicator": 44 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 19,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "31_SA": { },
+      "32_SA": { },
+      "34_PA": { },
+      "34_TGA": { },
+      "35_QBA": { },
+      "36_LA": { },
+      "36_UA": { }
+    }
+  },
+
+
+  "2015": {
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "PS", "order": 15 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Sconce", "location": "DS", "order": 15 },
+          "10": { "name": "Reading", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Shades": {
+          "4": { "name": "Entry", "location": "CS", "order": 1 , "single": "night" },
+          "3": { "name": "P/S", "location": "MS", "order": 1, "voicename": "Passenger" },
+          "6": { "name": "D/S Front", "location": "MS", "order": 2, "voicename": "Front" },
+          "7": { "name": "D/S Mid", "location": "MS", "order": 3, "voicename": "Middle" },
+          "8": { "name": "D/S Rear", "location": "MS", "order": 4, "voicename": "Rear" },
+          "3 6 7 8": { "name": "All Shades", "location": "GS", "order": 1, "voiceid": 250 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Locks": 1,
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "37_AP": {
+        "Lights": {
+          "5": "",
+          "13": "",
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_SP": {
+        "Lights": {
+          "18": "",
+          "28": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_LP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_LP_JA": {
+        "Comment": "Special floorplan for customer who added cockpit shade controls.",
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" },
+          "90": { "name": "Windshield", "location": "CS", "order": 2  },
+          "91": { "name": "Passenger", "location": "CS", "order": 3, "single": "night" },
+          "92": { "name": "Driver", "location": "CS", "order": 4, "single": "night" }
+        }
+      },
+      "45_OP": {
+        "Lights": {
+          "5": "",
+          "18": ""
+        },
+        "Shades": {
+          "3": { "name": "D/S", "voicename": "Driver" },
+          "6": "",
+          "7": { "name": "P/S Front", "voicename": "Passenger" },
+          "8": { "name": "P/S Dining", "voicename": "Dining" }
+        }
+      },
+      "45_UP": {
+        "Lights": {
+          "5": "",
+          "7": "",
+          "9": { "name": "Sconce" },
+          "14": { "location": "PS" }
+        }
+      }
+    },
+
+    "_comment": "2015",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 5 },
+          "96": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "36_GH": {
+        "Lights": {
+          "5": "",
+          "13": { "name": "Sink Ceiling", "location": "MB", "order": 30 },
+          "17": { "name": "Sink Vanity", "location": "MB", "order": 40 },
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "13": "",
+          "17": ""
+        }
+      },
+      "40_QBH": { },
+      "40_QKH": {
+        "Lights": {
+          "13": "",
+          "17": ""
+        }
+      },
+      "42_LH": { }
+    },
+
+    "_comment": "2015",
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 18 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 12 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "M", "order": 15 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 2 },
+          "16": { "name": "Vanity", "location": "MB", "order": 4 },
+          "17": { "name": "Vanity", "location": "RB", "order": 4 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "20": { "name": "Accent", "location": "BR", "order": 40 },
+          "21": { "name": "Road", "location": "E", "order": 20 },
+          "22": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Ceiling", "location": "C", "order": 10 },
+          "95": { "name": "Door", "location": "E", "order": 10 },
+          "96": { "name": "Cargo", "location": "E", "order": 10 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31, "indicator": 54 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 1
+      },
+      "33_AA": { },
+      "36_QSA": { },
+      "37_PA": { },
+      "38_QBA": { },
+      "38_QRA": { }
+    },
+
+    "_comment": "2015",
+    "Allegro_Open_Road": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 1 },
+          "2": { "name": "Ceiling", "location": "M", "order": 2 },
+          "3": { "name": "Task", "location": "M", "order": 1 },
+          "4": { "name": "Hall", "location": "M", "order": 1 },
+          "5": { "name": "Entry", "location": "M", "order": 1 },
+          "6": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "8": { "name": "Floor", "location": "M", "order": 1 },
+          "23": { "name": "Porch", "location": "E", "order": 1 },
+          "34": { "name": "Dinette", "location": "M", "order": 1 },
+          "35": { "name": "Sconce", "location": "M", "order": 1 },
+          "36": { "name": "TV Accent", "location": "M", "order": 1 }
+        },
+        "Vents": {
+          "galley": { "fan": 27, "lidup": 25, "liddn": 26, "indicator": 8 },
+          "mid": { "fan": 30, "lidup": 28, "liddn": 29, "indicator": 44 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
+        },
+        "Awnings": {
+          "18": { "name": "Patio", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Pump": 19,
+        "Elecheat": 22,
+        "Fuelheat": 21,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "31_SA": { },
+      "32_SA": { },
+      "32_CA": { },
+      "34_TGA": { },
+      "35_QBA": { },
+      "36_LA": { }
+    }
+  },
+
+
+  "2014": {
+    "Allegro_Bus": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Entry", "location": "M", "order": 10 },
+          "2": { "name": "Galley", "location": "DS", "order": 5 },
+          "3": { "name": "Dinette", "location": "PS", "order": 5 },
+          "4": { "name": "Task", "location": "DS", "order": 10 },
+          "5": { "name": "Ceiling", "location": "M", "order": 5 },
+          "6": { "name": "Ceiling", "location": "BR", "order": 5 },
+          "7": { "name": "Reading", "location": "BR", "order": 10 },
+          "8": { "name": "Sconce", "location": "BR", "order": 15 },
+          "9": { "name": "Ceiling", "location": "RB", "order": 5 },
+          "10": { "name": "Vanity", "location": "RB", "order": 10 },
+          "11": { "name": "Ceiling", "location": "MB", "order": 5 },
+          "19": { "name": "Entry Step", "location": "PS", "order": 10 },
+          "21": { "name": "Vanity", "location": "MB", "order": 10 },
+          "23": { "name": "Galley Accent", "location": "DS", "order": 15 },
+          "24": { "name": "Ceiling", "location": "C", "order": 25 },
+          "25": { "name": "Door", "location": "E", "order": 5 },
+          "26": { "name": "Door Handle", "location": "E", "order": 5 },
+          "27": { "name": "Porch", "location": "E", "order": 10 },
+          "28": { "name": "Road", "location": "E", "order": 20 },
+          "29": { "name": "Cargo", "location": "E", "order": 15 }
+        },
+        "Shades": {
+          "0": { "name": "Entry", "location": "CS", "order": 4 , "single": "night" }
+        },
+        "Locks": 1,
+        "Pump": 30,
+        "Elecheat": 0,
+        "Fuelheat": 0,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "45_LP": { }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo mount -o remount,rw /
+sudo systemctl enable habridge
+sudo mount -o remount,ro /
+sudo systemctl restart habridge

@@ -1,0 +1,23 @@
+authtoken: AUTHTOKEN
+region: us
+console_ui: false
+update: false
+tunnels:
+  coachproxy:
+    addr: 80
+    proto: http
+    auth: USERNAME:PASSWORD
+    subdomain: SUBDOMAIN
+    bind_tls: BIND_TLS
+    inspect: false
+
+  # Allow unauthenticated http requests through the tunnel, but
+  # forward them to port 8443 which will redirect them to https.
+  # This ensures that no basic-auth usernames/passwords will be
+  # sent over non-SSL.
+  ssl_redirect:
+    addr: 8443
+    proto: http
+    subdomain: SUBDOMAIN
+    bind_tls: false
+    inspect: false

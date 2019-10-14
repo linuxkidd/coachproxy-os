@@ -1,0 +1,212 @@
+# Install all required files into /coachproxy
+
+---
+
+- name: Create /coachproxy directory
+  file:
+    path: /coachproxy
+    state: directory
+  become: true
+
+- name: Ensure /coachproxy is owned by pi:pi
+  file:
+    path: /coachproxy
+    owner: pi
+    group: pi
+    mode: 0755
+  become: true
+
+# 'delete: false' is used because other files (e.g. nodered modules)
+# will be installed later and shouldn't be clobbered on subsequent
+# Ansible runs.
+
+- name: Install /coachproxy files
+  synchronize:
+    src: "files/"
+    dest: /coachproxy/
+    recursive: true
+    delete: false
+    links: true
+    perms: true
+    times: true
+    owner: false
+    group: false
+
+# node-red configs
+
+- name: Copy initial node-red flows file to main flows file
+  copy:
+    src: /coachproxy/node-red/flows_coachproxy-base.json
+    dest: /coachproxy/node-red/flows_coachproxy.json
+    remote_src: true
+
+- name: Copy initial database file to main database file
+  copy:
+    src: /coachproxy/node-red/coachproxy.sqlite-base
+    dest: /coachproxy/node-red/coachproxy.sqlite
+    remote_src: true
+
+# crontab
+
+- name: Stop cron (but leave it enabled) while Ansible is setting things up.
+  systemd:
+    name: cron
+    state: stopped
+  become: true
+
+- name: Ensure crontab is owned by root, not pi
+  file:
+    path: /coachproxy/etc/cron.d/coachproxy
+    owner: root
+  become: true
+
+- name: Link custom crontab
+  file:
+    src: /coachproxy/etc/cron.d/coachproxy
+    dest: /etc/cron.d/coachproxy
+    state: link
+  become: true
+
+# /etc/hosts
+
+- name: Install custom /etc/hosts
+  copy:
+    src: /coachproxy/etc/hosts
+    dest: /etc/hosts
+    remote_src: true
+  become: true
+
+# rc.local
+
+- name: Call the coachproxy rc.local file from /etc/rc.local
+  lineinfile:
+    path: /etc/rc.local
+    line: /coachproxy/etc/rc.local.coachproxy
+    insertbefore: '^exit 0'
+  become: true
+
+# mosquitto
+
+- name: Link mosquitto configuration
+  file:
+    src: /coachproxy/etc/mosquitto/mosquitto.conf
+    dest: /etc/mosquitto/mosquitto.conf
+    state: link
+    force: yes
+  become: true
+
+# habridge / Alexa integration
+
+- name: Install ha-bridge systemd file
+  copy:
+    src: /coachproxy/etc/systemd/system/habridge.service
+    dest: /etc/systemd/system/habridge.service
+    remote_src: true
+  become: true
+
+- name: Install default habridge.config file
+  copy:
+    src: /coachproxy/ha-bridge/habridge.config.template
+    dest: /coachproxy/ha-bridge/habridge.config
+    remote_src: true
+
+- name: Enable habridge Alexa service
+  systemd:
+    name: habridge
+    enabled: true
+  become: true
+
+# nginx
+
+- name: Disable default nginx config
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  become: true
+
+- name: Link custom nginx config
+  file:
+    src: /coachproxy/etc/nginx/sites-available/10-CoachProxy.conf
+    dest: /etc/nginx/sites-enabled/10-CoachProxy.conf
+    state: link
+  become: true
+
+# fake-hwclock
+
+- name: Link fake-hwclock to /coachproxy/etc
+  file:
+    src: /coachproxy/etc/fake-hwclock.data
+    dest: /etc/fake-hwclock.data
+    state: link
+    force: yes
+    follow: no
+  become: true
+
+- name: Restart fake-hwclock service
+  systemd:
+    name: fake-hwclock
+    state: restarted
+  become: true
+
+# default vimrc and bash aliases
+
+- name: Link custom vimrc
+  file:
+    src: /coachproxy/etc/vim/vimrc.local
+    dest: /etc/vim/vimrc.local
+    state: link
+  become: true
+
+- name: Link custom bash profile
+  file:
+    src: /coachproxy/etc/profile.d/coachproxy.sh
+    dest: /etc/profile.d/coachproxy.sh
+    state: link
+  become: true
+
+# pi user home directory
+
+- name: Check if pi home directory has already been copied
+  stat:
+    path: /coachproxy/home/pi/.ssh
+  register: home_pi_moved
+
+- name: Copy old /home/pi directory to /coachproxy/home/pi
+  command: cp -r /home/pi /coachproxy/home/
+  when: home_pi_moved.stat.exists == false
+
+- name: Change pi user home directory in /etc/passwd
+  lineinfile:
+    path: /etc/passwd
+    regexp: '^.*/home/pi:.*$'
+    line: 'pi:x:1000:1000:,,,:/coachproxy/home/pi:/bin/bash'
+  become: true
+
+- name: Delete /home/pi directory
+  file:
+    path: /home/pi
+    state: absent
+  become: true
+
+- name: Replace /home/pi with a symlink to the new home
+  file:
+    src: /coachproxy/home/pi
+    dest: /home/pi
+    state: link
+  become: true
+
+# install ngrok for remote access
+
+- name: Check if ngrok has already been installed
+  stat:
+    path: /usr/local/bin/ngrok
+  register: ngrok
+
+- name: Download ngrok binary
+  unarchive:
+    src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+    dest: /usr/local/bin
+    mode: 0755
+    remote_src: yes
+  when: ngrok.stat.exists == false
+  become: true

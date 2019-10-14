@@ -1,0 +1,11 @@
+
+---
+
+- hosts: all
+  roles:
+    - locale-us
+    - base_os
+    - coachproxy
+    - node-red   # Must be after 'coachproxy' role
+    - networking
+    - misc

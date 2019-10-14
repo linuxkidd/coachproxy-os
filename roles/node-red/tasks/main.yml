@@ -1,0 +1,69 @@
+# Install NodeJS and Node-RED for Raspberry Pi 3
+
+---
+
+- name: Link default node-red directory to /coachproxy
+  file:
+    src: /coachproxy/node-red
+    dest: /coachproxy/home/pi/.node-red
+    state: link
+
+- name: Check if Node-RED has already been installed
+  stat:
+    path: /usr/bin/node-red-start
+  register: node_red_start
+
+- name: Download update-nodejs-and-nodered script
+  get_url:
+    url: https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered
+    dest: /tmp/update-nodejs-and-nodered
+    mode: 0777
+  when: node_red_start.stat.exists == false
+
+- name: Upgrade nodejs and nodered
+  shell: "yes | /tmp/update-nodejs-and-nodered"
+  when: node_red_start.stat.exists == false
+
+- name: Ensure required node-red nodes are installed (be patient for sqlite)
+  npm:
+    name: "{{ item }}"
+    path: /coachproxy/node-red
+  with_items:
+    - node-red-dashboard
+    - node-red-node-email
+    - node-red-node-pushover
+    - node-red-node-pushbullet
+    - node-red-node-sqlite
+    - node-red-contrib-file-function-ext
+    - node-red-contrib-throttle
+    - node-red-contrib-timeout
+    - node-red-contrib-wifiscan
+    - node-red-contrib-simple-gate
+    - node-red-contrib-dsm
+    - node-red-contrib-simpletime
+    - node-red-contrib-schedex
+
+- name: Replace boilerplate Node-RED text in blank dashboard page
+  replace:
+    path: /coachproxy/node-red/node_modules/node-red-dashboard/dist/index.html
+    regexp: 'Welcome to the Node-RED Dashboard'
+    replace: 'Welcome to CoachProxyOS'
+
+- name: Replace more boilerplate Node-RED text in blank dashboard page
+  replace:
+    path: /coachproxy/node-red/node_modules/node-red-dashboard/dist/index.html
+    regexp: 'Please add some UI nodes to your flow and redeploy.'
+    replace: 'Please wait a moment while CoachProxyOS loads...'
+
+- name: Copy extra CSS file into node-red-dashboard html directory
+  copy:
+    src: font-awesome-animation.min.css
+    dest: /coachproxy/node-red/node_modules/node-red-dashboard/dist/css/font-awesome-animation.min.css
+    mode: 0644
+
+- name: enable node-red in systemctl
+  systemd:
+    name: nodered
+    enabled: true
+    daemon_reload: true
+  become: true

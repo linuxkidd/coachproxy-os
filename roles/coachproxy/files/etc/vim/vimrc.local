@@ -1,0 +1,14 @@
+" Map jj to ESC since it's easier to reach while in insert mode
+imap jj <ESC>
+
+" Show $ at end of word change (cw)
+set cpoptions+=$
+
+" Don't hide the double-quotes in JSON symbols.
+let g:vim_json_syntax_conceal=0
+
+" Use spaces instead of tabs
+set tabstop     =2
+set softtabstop =2
+set shiftwidth  =2
+set expandtab

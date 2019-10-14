@@ -1,0 +1,2326 @@
+[
+    {
+        "id": "2fdd8124.05e35e",
+        "type": "tab",
+        "label": "Notify / System"
+    },
+    {
+        "id": "f6c367c2.63b9b8",
+        "type": "tab",
+        "label": "Configuration",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c1170463.5c7f8",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "verifyservercert": true,
+        "compatmode": true,
+        "keepalive": "15",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "true",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "true",
+        "willPayload": ""
+    },
+    {
+        "id": "f961f048.b0646",
+        "type": "ui_group",
+        "z": "",
+        "name": "System Information",
+        "tab": "10cd091e.2c38a7",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b29ba418.731d88",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#169dd3",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "default": "#4B7930",
+                "baseColor": "#3d89be",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094ce",
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#3d89be",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#e8e8e8",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#3d89be",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#3d89be",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "CoachProxy",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 46,
+                "sy": 48,
+                "gx": 14,
+                "gy": 14,
+                "cx": 6,
+                "cy": 6,
+                "px": 4,
+                "py": 6
+            }
+        }
+    },
+    {
+        "id": "39ecc94c.7e22c6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Coach Selection",
+        "tab": "2b742e36.100002",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dd373808.7ec1d8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Coach Options",
+        "tab": "2b742e36.100002",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e1a5049d.4cee88",
+        "type": "ui_group",
+        "z": "",
+        "name": "Save and Install",
+        "tab": "2b742e36.100002",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b9bfcd9c.3c935",
+        "type": "sqlitedb",
+        "z": "",
+        "db": "/coachproxy/node-red/coachproxy.sqlite"
+    },
+    {
+        "id": "2b742e36.100002",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Configuration",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "10cd091e.2c38a7",
+        "type": "ui_tab",
+        "z": "",
+        "name": "System",
+        "icon": "settings",
+        "order": 4
+    },
+    {
+        "id": "aa6e102.01c5bf",
+        "type": "ui_group",
+        "z": "",
+        "name": "User Interface Options",
+        "tab": "2b742e36.100002",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9634a554.eba588",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "Shutdown",
+        "group": "f961f048.b0646",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Shutdown",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-power-off",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "shutdown",
+        "x": 580,
+        "y": 2740,
+        "wires": [
+            [
+                "415af2a8.5a947c"
+            ]
+        ]
+    },
+    {
+        "id": "415af2a8.5a947c",
+        "type": "exec",
+        "z": "2fdd8124.05e35e",
+        "command": "sudo /coachproxy/bin/safe_shutdown",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "",
+        "x": 850,
+        "y": 2740,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4c3ea3a.8a313dc",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "Reboot",
+        "group": "f961f048.b0646",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "label": "Reboot",
+        "color": "",
+        "icon": "fa-repeat",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "reboot",
+        "x": 580,
+        "y": 2680,
+        "wires": [
+            [
+                "14f6b812.2c4f78"
+            ]
+        ]
+    },
+    {
+        "id": "14f6b812.2c4f78",
+        "type": "exec",
+        "z": "2fdd8124.05e35e",
+        "command": "sudo /coachproxy/bin/safe_reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "",
+        "x": 840,
+        "y": 2680,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c3ffc9c.ac652c",
+        "type": "ui_text",
+        "z": "2fdd8124.05e35e",
+        "group": "f961f048.b0646",
+        "order": 7,
+        "width": "",
+        "height": "",
+        "name": "Shutdown Feedback",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 800,
+        "y": 2800,
+        "wires": []
+    },
+    {
+        "id": "4c937d76.07d3cc",
+        "type": "mqtt in",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "topic": "GLOBAL/SN",
+        "qos": "0",
+        "broker": "c1170463.5c7f8",
+        "x": 570,
+        "y": 2500,
+        "wires": [
+            [
+                "961203aa.9823c"
+            ]
+        ]
+    },
+    {
+        "id": "961203aa.9823c",
+        "type": "ui_text",
+        "z": "2fdd8124.05e35e",
+        "group": "f961f048.b0646",
+        "order": 2,
+        "width": "",
+        "height": "",
+        "name": "Serial Number",
+        "label": "Serial Number",
+        "format": "{{msg.payload}}",
+        "layout": "",
+        "x": 780,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "ed8f62b5.c7ed48",
+        "type": "ui_text",
+        "z": "2fdd8124.05e35e",
+        "group": "f961f048.b0646",
+        "order": 1,
+        "width": "",
+        "height": "",
+        "name": "Software Version",
+        "label": "Software Version",
+        "format": "{{msg.payload}}",
+        "layout": "",
+        "x": 790,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "f47d0e1c.87d328",
+        "type": "inject",
+        "z": "2fdd8124.05e35e",
+        "name": "Every Minute",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "x": 160,
+        "y": 2580,
+        "wires": [
+            [
+                "e1ba3e99.4f13a"
+            ]
+        ]
+    },
+    {
+        "id": "e1ba3e99.4f13a",
+        "type": "exec",
+        "z": "2fdd8124.05e35e",
+        "command": "date +%s -d \"$(uptime -s)\"",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "name": "Uptime",
+        "x": 360,
+        "y": 2580,
+        "wires": [
+            [
+                "3fcf94be.9ffbec"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b6168986.1a2508",
+        "type": "ui_text",
+        "z": "2fdd8124.05e35e",
+        "group": "f961f048.b0646",
+        "order": 3,
+        "width": "",
+        "height": "",
+        "name": "Uptime",
+        "label": "Uptime",
+        "format": "{{msg.payload}}",
+        "layout": "",
+        "x": 760,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "bcfdd5c3.eb51c",
+        "type": "mqtt in",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "topic": "GLOBAL/SHUTDOWN",
+        "qos": "0",
+        "broker": "c1170463.5c7f8",
+        "x": 540,
+        "y": 2800,
+        "wires": [
+            [
+                "2c3ffc9c.ac652c"
+            ]
+        ]
+    },
+    {
+        "id": "3fcf94be.9ffbec",
+        "type": "file function",
+        "z": "2fdd8124.05e35e",
+        "name": "uptime_parse",
+        "filename": ".node-red/js/uptime_parse.js",
+        "reloadfile": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 2580,
+        "wires": [
+            [
+                "b6168986.1a2508"
+            ]
+        ]
+    },
+    {
+        "id": "29d34722.717808",
+        "type": "comment",
+        "z": "2fdd8124.05e35e",
+        "name": "System Tab",
+        "info": "",
+        "x": 570,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "4f256116.a0922",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save Option",
+        "func": "// Save the user's selection for future use\nflow.set(msg.topic, msg.payload); ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1150,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a460ddd.614d34",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Heated Floors",
+        "group": "dd373808.7ec1d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "floorheat",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 780,
+        "y": 640,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "e17935c4.9179d8",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Aqua-Hot",
+        "group": "dd373808.7ec1d8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "aquahot",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 760,
+        "y": 580,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "d47744cb.8e65a8",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Third Air Conditioner Zone",
+        "group": "dd373808.7ec1d8",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "thirdtstat",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 820,
+        "y": 980,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "ebfe21a.9252fe",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Ceiling Fan",
+        "group": "dd373808.7ec1d8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ceilfan",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 770,
+        "y": 700,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "dc84eec5.90206",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "TV Lift",
+        "group": "dd373808.7ec1d8",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "tvlift",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 780,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "3e7decdc.b1a0f4",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Bus Undercoach Light (2018+)",
+        "group": "dd373808.7ec1d8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "busundercoach",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 830,
+        "y": 840,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "a5725878.456328",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Second Furnace Zone",
+        "group": "dd373808.7ec1d8",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "secondfurnace",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 800,
+        "y": 1060,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "d1929547.5808b8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Heated Floors",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.floorheat = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "6a460ddd.614d34"
+            ]
+        ]
+    },
+    {
+        "id": "a11e14a2.3f8368",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Aqua-Hot",
+        "func": "// Populate the \"Aqua-Hot\" toggle based on the chosen model.\n\nvar aquahot_standard = ['Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '' };\n\nif (flow.get('model')) {\n    if (aquahot_standard.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n} else {\n    msg = null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 600,
+        "wires": [
+            [
+                "e17935c4.9179d8"
+            ]
+        ]
+    },
+    {
+        "id": "9367e589.40dcc8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Aquahot",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.aquahot = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "e17935c4.9179d8"
+            ]
+        ]
+    },
+    {
+        "id": "52b131c0.3e0bc",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Third Tstat",
+        "func": "// Populate the \"Number of Thermostats\" toggle based on the chosen model.\n\nvar third_zone = ['Phaeton', 'Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '', enabled: true };\n\nif (flow.get('model')) {\n    if (third_zone.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n}\n\nif (flow.get('year') < 2018 && flow.get('model').substring(0,8) != 'VanLeigh') {\n    msg.enabled = false;\n    msg.payload = false;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1000,
+        "wires": [
+            [
+                "d47744cb.8e65a8"
+            ]
+        ]
+    },
+    {
+        "id": "96cb49b8.8b8178",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Third Tstat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.thirdtstat = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 960,
+        "wires": [
+            [
+                "d47744cb.8e65a8"
+            ]
+        ]
+    },
+    {
+        "id": "d7334b34.c939a8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Ceiling Fan",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ceilfan = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "ebfe21a.9252fe"
+            ]
+        ]
+    },
+    {
+        "id": "c850c110.ae628",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Ceiling Fan",
+        "func": "// Populate the \"Ceiling Fan\" toggle based on the chosen model.\n\nvar ceilfan_standard = ['Phaeton', 'Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '' };\n\nif (flow.get('model')) {\n    if (ceilfan_standard.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n} else {\n    msg = null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "ebfe21a.9252fe"
+            ]
+        ]
+    },
+    {
+        "id": "9b73dccc.9604f",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set TV Lift",
+        "func": "// Populate the \"TV Lift\" toggle based on the chosen model.\n\nvar tvlift = ['37_BH', '40_IH', '44_OH', '45_MP', '45_OPP', '45_PZ'];\nvar msg = { topic: '', payload: '' };\n\nmsg.payload = tvlift.includes(flow.get('floorplan'));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 800,
+        "wires": [
+            [
+                "dc84eec5.90206"
+            ]
+        ]
+    },
+    {
+        "id": "e55635a0.d71c08",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved TV Lift",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tvlift = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 760,
+        "wires": [
+            [
+                "dc84eec5.90206"
+            ]
+        ]
+    },
+    {
+        "id": "339d95b3.f8e70a",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Under Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.busundercoach = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 840,
+        "wires": [
+            [
+                "3e7decdc.b1a0f4"
+            ]
+        ]
+    },
+    {
+        "id": "fae26113.b499f",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Second Furnace",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.secondfurnace = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1040,
+        "wires": [
+            [
+                "a5725878.456328"
+            ]
+        ]
+    },
+    {
+        "id": "415cf9bf.4a48f8",
+        "type": "link in",
+        "z": "f6c367c2.63b9b8",
+        "name": "Stored Configs Out",
+        "links": [
+            "f064e789.8ee718"
+        ],
+        "x": 95,
+        "y": 440,
+        "wires": [
+            [
+                "4dfe1b9e.8930a4",
+                "9367e589.40dcc8",
+                "d1929547.5808b8",
+                "d7334b34.c939a8",
+                "e55635a0.d71c08",
+                "96cb49b8.8b8178",
+                "4e592cfc.f31974",
+                "339d95b3.f8e70a",
+                "fae26113.b499f",
+                "3d01252.b8a7ada",
+                "c55f7e9a.5b269",
+                "bb656f06.c9eb4",
+                "d6e99aed.9f4498",
+                "2dc7b437.5e033c",
+                "3ad5f7f6.789c88"
+            ]
+        ]
+    },
+    {
+        "id": "9f2c8e4f.b0e94",
+        "type": "link in",
+        "z": "f6c367c2.63b9b8",
+        "name": "Coach Config Changed - Out",
+        "links": [
+            "8b7ede7f.8f951"
+        ],
+        "x": 95,
+        "y": 740,
+        "wires": [
+            [
+                "a11e14a2.3f8368",
+                "52b131c0.3e0bc",
+                "9adc4e9b.8e2d2",
+                "9b73dccc.9604f",
+                "c850c110.ae628",
+                "98b23545.c429e8",
+                "b28430f0.302e8",
+                "5dff0e93.907d5"
+            ]
+        ]
+    },
+    {
+        "id": "4dfe1b9e.8930a4",
+        "type": "delay",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "750",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "7fdd649c.54de1c"
+            ]
+        ]
+    },
+    {
+        "id": "b33f57fb.ddb3c8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Model",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.model",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "25d3ff72.475b8"
+            ]
+        ]
+    },
+    {
+        "id": "8466b73c.6d83f8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Year",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.year",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "6303f680.65dfe8"
+            ]
+        ]
+    },
+    {
+        "id": "4e592cfc.f31974",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Buttons Enabled?",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload.floorplan != null",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1500,
+        "wires": [
+            [
+                "66a1a845.bdd5e8"
+            ]
+        ]
+    },
+    {
+        "id": "9adc4e9b.8e2d2",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Buttons Enabled?",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "$flowContext('floorplan') != ''",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1540,
+        "wires": [
+            [
+                "66a1a845.bdd5e8"
+            ]
+        ]
+    },
+    {
+        "id": "7fdd649c.54de1c",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Floor Plan",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.floorplan",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 480,
+        "wires": [
+            [
+                "21735e3b.c9fa92"
+            ]
+        ]
+    },
+    {
+        "id": "25d3ff72.475b8",
+        "type": "ui_dropdown",
+        "z": "f6c367c2.63b9b8",
+        "name": "Model Menu",
+        "label": "",
+        "place": "Coach model",
+        "group": "39ecc94c.7e22c6",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "model",
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "c14463eb.5b67e"
+            ]
+        ]
+    },
+    {
+        "id": "6303f680.65dfe8",
+        "type": "ui_dropdown",
+        "z": "f6c367c2.63b9b8",
+        "name": "Year Menu",
+        "label": "",
+        "place": "Coach year",
+        "group": "39ecc94c.7e22c6",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "year",
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "5da86ad4.9ce744"
+            ]
+        ]
+    },
+    {
+        "id": "66a1a845.bdd5e8",
+        "type": "ui_button",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save and Install",
+        "group": "e1a5049d.4cee88",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Save and Install",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-check",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "save",
+        "x": 790,
+        "y": 1520,
+        "wires": [
+            [
+                "67d471e1.e9d42",
+                "956586e8.3221f8",
+                "d61ef8cb.9169a8",
+                "6504b8c0.3a9508"
+            ]
+        ]
+    },
+    {
+        "id": "21735e3b.c9fa92",
+        "type": "ui_dropdown",
+        "z": "f6c367c2.63b9b8",
+        "name": "Floor Plan Menu",
+        "label": "",
+        "place": "Coach floor plan",
+        "group": "39ecc94c.7e22c6",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "floorplan",
+        "x": 780,
+        "y": 480,
+        "wires": [
+            [
+                "5da0435a.8fc65c"
+            ]
+        ]
+    },
+    {
+        "id": "c14463eb.5b67e",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save Model",
+        "rules": [
+            {
+                "t": "set",
+                "p": "model",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 420,
+        "wires": [
+            [
+                "8b7ede7f.8f951",
+                "270f63d.458b59c"
+            ]
+        ]
+    },
+    {
+        "id": "5da86ad4.9ce744",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save Year",
+        "rules": [
+            {
+                "t": "set",
+                "p": "year",
+                "pt": "flow",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 360,
+        "wires": [
+            [
+                "8b7ede7f.8f951",
+                "b23dd0b8.9d48d"
+            ]
+        ]
+    },
+    {
+        "id": "67d471e1.e9d42",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save to Database",
+        "func": "// Save the global config settings to the database\n\nvar msgs = [];  // An array of database query messages\n\nfor (var item of ['year', 'model', 'floorplan', 'aquahot', 'floorheat', 'ceilfan', 'tvlift', 'thirdtstat', 'secondfurnace', 'midheat', 'rearheat', 'busundercoach', 'powerbed', 'shades_interior']) {\n    var newmsg = {};\n    newmsg.topic = 'INSERT OR REPLACE INTO configs (key, value) VALUES(?, ?)';\n    newmsg.payload = [item, String(flow.get(item))];\n    msgs.push(newmsg);\n}\n\nreturn [msgs, {payload: 'Saving changes...'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1070,
+        "y": 1500,
+        "wires": [
+            [
+                "c2127265.468ad"
+            ],
+            [
+                "426d2ff7.9aa5f"
+            ]
+        ],
+        "outputLabels": [
+            "array of queries",
+            "feedback message"
+        ]
+    },
+    {
+        "id": "956586e8.3221f8",
+        "type": "delay",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1040,
+        "y": 1540,
+        "wires": [
+            [
+                "430d058c.29f94c",
+                "7cd87312.e8638c"
+            ]
+        ]
+    },
+    {
+        "id": "d61ef8cb.9169a8",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Disable Button",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1600,
+        "wires": [
+            [
+                "66a1a845.bdd5e8"
+            ]
+        ]
+    },
+    {
+        "id": "6504b8c0.3a9508",
+        "type": "delay",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 630,
+        "y": 1640,
+        "wires": [
+            [
+                "fc78cf2.39df13",
+                "60ea3bd5.a290b4"
+            ]
+        ]
+    },
+    {
+        "id": "fc78cf2.39df13",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Enable Button",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 1640,
+        "wires": [
+            [
+                "66a1a845.bdd5e8"
+            ]
+        ]
+    },
+    {
+        "id": "5da0435a.8fc65c",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Save Floor Plan",
+        "func": "// Save the user's selection for future use\nif (msg.payload !== '') {\n    flow.set('floorplan', msg.payload);\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "8b7ede7f.8f951"
+            ]
+        ]
+    },
+    {
+        "id": "8b7ede7f.8f951",
+        "type": "link out",
+        "z": "f6c367c2.63b9b8",
+        "name": "Coach Config Changed - In",
+        "links": [
+            "9f2c8e4f.b0e94",
+            "6ec94471.102c8c",
+            "c8c58e81.c105a"
+        ],
+        "x": 1155,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c2127265.468ad",
+        "type": "sqlite",
+        "z": "f6c367c2.63b9b8",
+        "mydb": "b9bfcd9c.3c935",
+        "name": "",
+        "x": 1340,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "426d2ff7.9aa5f",
+        "type": "ui_text",
+        "z": "f6c367c2.63b9b8",
+        "group": "e1a5049d.4cee88",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Feedback Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1670,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "430d058c.29f94c",
+        "type": "exec",
+        "z": "f6c367c2.63b9b8",
+        "command": "/coachproxy/configurator/cp_config.pl",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 1350,
+        "y": 1540,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7cd87312.e8638c",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Message: Building configuration...",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Building configuration...",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 1580,
+        "wires": [
+            [
+                "426d2ff7.9aa5f"
+            ]
+        ]
+    },
+    {
+        "id": "60ea3bd5.a290b4",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 1680,
+        "wires": [
+            [
+                "426d2ff7.9aa5f"
+            ]
+        ]
+    },
+    {
+        "id": "b9c3efcf.5b28",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 1400,
+        "wires": [
+            [
+                "426d2ff7.9aa5f"
+            ]
+        ]
+    },
+    {
+        "id": "7439d0ba.87459",
+        "type": "ui_ui_control",
+        "z": "f6c367c2.63b9b8",
+        "name": "Update when tab is displayed",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "1f4566f5.e96699",
+                "66feb50d.f466dc"
+            ]
+        ]
+    },
+    {
+        "id": "1f4566f5.e96699",
+        "type": "template",
+        "z": "f6c367c2.63b9b8",
+        "name": "Load Configs",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "select * from configs;",
+        "output": "str",
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "56106b2a.7d2784"
+            ]
+        ]
+    },
+    {
+        "id": "56106b2a.7d2784",
+        "type": "sqlite",
+        "z": "f6c367c2.63b9b8",
+        "mydb": "b9bfcd9c.3c935",
+        "name": "coachproxy.sqlite",
+        "x": 630,
+        "y": 140,
+        "wires": [
+            [
+                "13e55d69.864273"
+            ]
+        ]
+    },
+    {
+        "id": "13e55d69.864273",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Parse Configs",
+        "func": "// msg.payload = msg.payload[0];\n// return msg;\n\nvar payload = {};\nfor (var i = 0; i < (msg.payload).length; i++) {\n    var key = msg.payload[i].key;\n    var val = msg.payload[i].value;\n    flow.set(key, val);\n    if (val !== '') {\n        payload[key] = val;\n    }\n}\n\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "f064e789.8ee718"
+            ]
+        ]
+    },
+    {
+        "id": "f064e789.8ee718",
+        "type": "link out",
+        "z": "f6c367c2.63b9b8",
+        "name": "Stored Configs In",
+        "links": [
+            "415cf9bf.4a48f8",
+            "a9afea44.76da08"
+        ],
+        "x": 975,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "53414f0e.6d8a",
+        "type": "ui_template",
+        "z": "f6c367c2.63b9b8",
+        "group": "39ecc94c.7e22c6",
+        "name": "CoachProxy Logo",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "format": "<img src=\"CoachProxy_logo.jpg\">",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "805121eb.01323",
+        "type": "ui_template",
+        "z": "f6c367c2.63b9b8",
+        "group": "dd373808.7ec1d8",
+        "name": "Configuration Message",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"height: 150px;\">\n<p>\n    Next, confirm the configuration options below are\n    correct for your coach.\n</p>\n<p>\n    <br>\n    Some options are only relevant to specific years\n    (e.g. thermostats) or models (e.g. undercoach lights).\n</p>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 810,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21500205.ffa20e",
+        "type": "ui_template",
+        "z": "f6c367c2.63b9b8",
+        "group": "39ecc94c.7e22c6",
+        "name": "Welcome Message",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"height: 130px;\">\n<p>\n    Welcome to CoachProxy!\n</p>\n<p>\n    <br>\n    Please select your year, model, and floor plan\n    below to begin. Note, you may need to scroll down\n    in the menu to find your model or floor plan.\n</p>\n</div>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 490,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47165ea9.fdf12",
+        "type": "ui_template",
+        "z": "f6c367c2.63b9b8",
+        "group": "e1a5049d.4cee88",
+        "name": "Save and Install Message",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<div style='height: 220px;'>\n<p>\n    When finished, use the \"Save and Install\" button\n    below to save your changes and re-configure your\n    CoachProxy.\n</p>\n<p>\n    <br>\n    <b>Important</b>: Your web browser may say 'Connection lost' while CoachProxy reloads. The re-configuration process will take approximately 30 seconds to complete.\n</p>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 810,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d031d4bf.52d7b8",
+        "type": "mqtt in",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "topic": "GLOBAL/VER",
+        "qos": "0",
+        "broker": "c1170463.5c7f8",
+        "x": 570,
+        "y": 2540,
+        "wires": [
+            [
+                "ed8f62b5.c7ed48"
+            ]
+        ]
+    },
+    {
+        "id": "e1e629e7.af8af8",
+        "type": "mqtt in",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "topic": "GLOBAL/SHUTDOWN",
+        "qos": "2",
+        "broker": "c1170463.5c7f8",
+        "x": 1400,
+        "y": 1440,
+        "wires": [
+            [
+                "426d2ff7.9aa5f"
+            ]
+        ]
+    },
+    {
+        "id": "1ad1aea9.866741",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Mid Zone Heat Pump",
+        "group": "dd373808.7ec1d8",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "midheat",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 800,
+        "y": 1140,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "771b1df0.fe0b74",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Rear Zone Heat Pump",
+        "group": "dd373808.7ec1d8",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "rearheat",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 800,
+        "y": 1220,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "3d01252.b8a7ada",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Mid Heat Pump",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.midheat = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1120,
+        "wires": [
+            [
+                "1ad1aea9.866741"
+            ]
+        ]
+    },
+    {
+        "id": "c55f7e9a.5b269",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Rear Heat Pump",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rearheat = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1200,
+        "wires": [
+            [
+                "771b1df0.fe0b74"
+            ]
+        ]
+    },
+    {
+        "id": "176c91be.746e3e",
+        "type": "ui_template",
+        "z": "f6c367c2.63b9b8",
+        "group": "dd373808.7ec1d8",
+        "name": "Config HVAC Header",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "format": "<div style=\"width: 100%; height: 10px; border-bottom: 1px solid black; text-align: center\">\n  <span style=\"background-color: #ffffff; padding: 0 10px;\">\n    2018+ Thermostat Controls\n  </span>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 800,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98b23545.c429e8",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Second Furnace",
+        "func": "// Populate the \"Number of Furnaces\" toggle based on the chosen model.\n\nvar second_furn = ['Phaeton', 'Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '', enabled: true };\n\nif (flow.get('model')) {\n    if (second_furn.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n}\n\nif (flow.get('year') < 2018 && flow.get('model').substring(0,8) != 'VanLeigh') {\n    msg.enabled = false;\n    msg.payload = false;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 1080,
+        "wires": [
+            [
+                "a5725878.456328"
+            ]
+        ]
+    },
+    {
+        "id": "b28430f0.302e8",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Mid Heat Pump",
+        "func": "var mid_hp = ['Phaeton', 'Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '', enabled: true };\n\nif (flow.get('model')) {\n    if (mid_hp.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n}\n\nif (flow.get('year') < 2018 && flow.get('model').substring(0,8) != 'VanLeigh') {\n    msg.enabled = false;\n    msg.payload = false;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 1160,
+        "wires": [
+            [
+                "1ad1aea9.866741"
+            ]
+        ]
+    },
+    {
+        "id": "5dff0e93.907d5",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Rear Heat Pump",
+        "func": "var rear_hp = ['Phaeton', 'Allegro_Bus', 'Zephyr'];\nvar msg = { topic: '', payload: '', enabled: true };\n\nif (flow.get('model')) {\n    if (rear_hp.includes(flow.get('model'))) {\n        msg.payload = true;\n    }\n}\n\nif (flow.get('year') < 2018 && flow.get('model').substring(0,8) != 'VanLeigh') {\n    msg.enabled = false;\n    msg.payload = false;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 1240,
+        "wires": [
+            [
+                "771b1df0.fe0b74"
+            ]
+        ]
+    },
+    {
+        "id": "bb656f06.c9eb4",
+        "type": "delay",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "b33f57fb.ddb3c8"
+            ]
+        ]
+    },
+    {
+        "id": "ec2c7c9d.42b27",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "label": "Power Smart Bed",
+        "group": "dd373808.7ec1d8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "powerbed",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 790,
+        "y": 880,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "d6e99aed.9f4498",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Power Bed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.powerbed = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 880,
+        "wires": [
+            [
+                "ec2c7c9d.42b27"
+            ]
+        ]
+    },
+    {
+        "id": "8e5f5dc.f1a6aa",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "Spyder Activity Indicator",
+        "group": "f961f048.b0646",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": " Spyder Activity",
+        "color": "{{msg.payload}}",
+        "bgcolor": "#ffffff",
+        "icon": "fa-podcast",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 810,
+        "y": 2900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd16beef.507ee",
+        "type": "trigger",
+        "z": "2fdd8124.05e35e",
+        "op1": "#eee",
+        "op2": "#999",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "150",
+        "extend": true,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "name": "Blink Trigger",
+        "x": 570,
+        "y": 2900,
+        "wires": [
+            [
+                "8e5f5dc.f1a6aa"
+            ]
+        ]
+    },
+    {
+        "id": "9620e4c3.ff1808",
+        "type": "mqtt in",
+        "z": "2fdd8124.05e35e",
+        "name": "DC_DIMMER_STATUS",
+        "topic": "DC_DIMMER_STATUS_3/#",
+        "qos": "2",
+        "broker": "c1170463.5c7f8",
+        "x": 360,
+        "y": 2900,
+        "wires": [
+            [
+                "fd16beef.507ee"
+            ]
+        ]
+    },
+    {
+        "id": "3c24ab01.350684",
+        "type": "ui_switch",
+        "z": "f6c367c2.63b9b8",
+        "name": "Interior Shades",
+        "label": "Move Window Shades to \"Interior\" Screen",
+        "group": "aa6e102.01c5bf",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "shades_interior",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 780,
+        "y": 1360,
+        "wires": [
+            [
+                "4f256116.a0922"
+            ]
+        ]
+    },
+    {
+        "id": "2dc7b437.5e033c",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "Set Saved Interior Shades",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.shades_interior = 'true'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 1360,
+        "wires": [
+            [
+                "3c24ab01.350684"
+            ]
+        ]
+    },
+    {
+        "id": "19a1189b.35b0e7",
+        "type": "ui_ui_control",
+        "z": "f6c367c2.63b9b8",
+        "name": "Update when tab is displayed",
+        "x": 1170,
+        "y": 1400,
+        "wires": [
+            [
+                "b9c3efcf.5b28"
+            ]
+        ]
+    },
+    {
+        "id": "3ad5f7f6.789c88",
+        "type": "delay",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "8466b73c.6d83f8"
+            ]
+        ]
+    },
+    {
+        "id": "66feb50d.f466dc",
+        "type": "file in",
+        "z": "f6c367c2.63b9b8",
+        "name": "features.json",
+        "filename": "/coachproxy/configurator/features.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "e799b9f8.9265d8"
+            ]
+        ]
+    },
+    {
+        "id": "e799b9f8.9265d8",
+        "type": "json",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 570,
+        "y": 180,
+        "wires": [
+            [
+                "1dd3a0a3.d2d49f"
+            ]
+        ]
+    },
+    {
+        "id": "1dd3a0a3.d2d49f",
+        "type": "change",
+        "z": "f6c367c2.63b9b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "features",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 180,
+        "wires": [
+            [
+                "2101a5b7.7681ea"
+            ]
+        ]
+    },
+    {
+        "id": "2101a5b7.7681ea",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Year Option List",
+        "func": "// Populate the \"Year\" menu with appropriate options based\n// on the features.json file.\n\nlet years = global.get('features');\nyears = Object.keys(years).filter(year => year[0] == 2).reverse();\n\nconst yearmsg = { options: years, payload: null, topic: null };\nconst blankmsg = { options: [], payload: null, topic: null }\n\nreturn [yearmsg, blankmsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 960,
+        "y": 180,
+        "wires": [
+            [
+                "6303f680.65dfe8"
+            ],
+            [
+                "25d3ff72.475b8",
+                "21735e3b.c9fa92"
+            ]
+        ]
+    },
+    {
+        "id": "b23dd0b8.9d48d",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Model Option List",
+        "func": "// Populate the \"Floor Plan\" menu with appropriate options based\n// on the user's choice of year and model.\n\nconst years = global.get('features');\n\n// User's choice of year\nconst year = flow.get('year');\n\nif (year && years[year]) {\n  const models = Object.keys(years[year]).filter(model => model != '_comment');\n\n  const modelmsg = { options: models, payload: null, topic: null };\n  const blankmsg = { options: [], payload: null, topic: null }\n\n  return [modelmsg, blankmsg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1230,
+        "y": 360,
+        "wires": [
+            [
+                "25d3ff72.475b8"
+            ],
+            [
+                "21735e3b.c9fa92"
+            ]
+        ]
+    },
+    {
+        "id": "270f63d.458b59c",
+        "type": "function",
+        "z": "f6c367c2.63b9b8",
+        "name": "Floor Plan Option List",
+        "func": "// Populate the \"Floor Plan\" menu with appropriate options based\n// on the user's choice of year and model.\n\nconst years = global.get('features');\n\n// User's choice of year and model\nconst year = flow.get('year');\nconst model = flow.get('model');\n\nif (year && model && years[year][model]) {\n  const floors = Object.keys(years[year][model]).filter(floor => floor != 'Default');\n\n  const floormsg = { options: floors, payload: null, topic: null };\n\n  return [floormsg];\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1240,
+        "y": 420,
+        "wires": [
+            [
+                "21735e3b.c9fa92"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+
+---
+
+- name: Add canbus driver info to boot config
+  blockinfile:
+    path: /boot/config.txt
+    insertafter: EOF
+    block: |
+      dtparam=spi=on
+      dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=25
+      dtoverlay=spi-bcm2835-overlay
+  become: true
+
+- name: Add custom browser/home screen icons and other assets
+  copy:
+    src: "{{ item }}"
+    dest: /coachproxy/node-red/node_modules/node-red-dashboard/dist/
+  with_items:
+    - icon64x64.png
+    - icon120x120.png
+    - icon192x192.png
+    - CoachProxy_logo.jpg
+
+- name: Delete existing SSH host keys
+  shell: rm /etc/ssh/ssh_host_*
+  args:
+    removes: /etc/ssh/ssh_host_key
+  become: true

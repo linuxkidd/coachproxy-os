@@ -1,0 +1,45 @@
+# Change locale info from GB to US
+
+---
+
+- name: Enable en_US locale in /etc/locale.gen
+  lineinfile:
+    path: /etc/locale.gen
+    line: 'en_US.UTF-8 UTF-8'
+  become: true
+
+- name: Disable en_GB locale in /etc/locale.gen
+  lineinfile:
+    path: /etc/locale.gen
+    line: 'en_GB.UTF-8 UTF-8'
+    state: absent
+  become: true
+
+- name: Get a list of which locales have been generated
+  command: locale -a
+  register: locale_result
+  changed_when: false
+
+- name: Generate US locale
+  command: locale-gen
+  become: true
+  when: locale_result.stdout.find('en_US.utf8') == -1
+
+- name: Ensure locale is set to U.S.
+  copy:
+    src: locale
+    dest: /etc/default/locale
+  become: true
+
+- name: Ensure keyboard is set to U.S.
+  copy:
+    src: keyboard
+    dest: /etc/default/keyboard
+  become: true
+
+- name: Delete non-en locale files to save space
+  shell: rm -rf /usr/share/locale/[a-d,f-z]*
+  args:
+    warn: no
+    removes: /usr/share/locale/zu
+  become: true

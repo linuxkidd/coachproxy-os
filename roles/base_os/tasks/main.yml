@@ -1,0 +1,130 @@
+
+---
+
+- name: Set hostname to coachproxyos
+  copy:
+    content: coachproxyos
+    dest: /etc/hostname
+  become: true
+
+- name: Disable automatic daily APT updates
+  systemd:
+    name: "{{ item }}"
+    enabled: false
+    state: stopped
+  become: true
+  with_items:
+    - apt-daily.timer
+    - apt-daily.service
+    - apt-daily-upgrade.timer
+    - apt-daily-upgrade.service
+
+- name: Ensure existing packages are up to date
+  apt:
+    upgrade: dist
+    update_cache: true
+  become: true
+
+# This fails when mixed in with the other packages, so it's handled separately here.
+- name: Ensure Java 8 JRE is installed
+  become: true
+  apt:
+    name: openjdk-8-jre-headless
+    state: present
+
+- name: Ensure required packages are installed
+  become: true
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      # Convenience tools used for managing the system
+      - tmux
+      - tcpdump
+      - vim
+      - rsync
+      # sqlite3 is used to store user preferences
+      - sqlite3
+      - libsqlite3-0
+      # can-utils is required to interact with the can bus
+      - can-utils
+      # cpanminus used to install required Perl modules
+      - cpanminus
+      # ipcalc is used by static IP code to ensure user didn't enter invalid gw
+      - ipcalc
+      # jq is used to edit nodered json flows files
+      - jq
+      # mosquitto is the MQTT message broker used for communications
+      - mosquitto
+      # nginx is used as a reverse web proxy in front of node-red
+      - nginx
+      # ntp and ntpdate set the system clock via the Internet
+      - ntp
+      - ntpdate
+      # lockfile-progs is used in various scripts
+      - lockfile-progs
+
+- name: Remove unneeded packages to save space
+  become: true
+  apt:
+    name: "{{ packages }}"
+    state: absent
+    autoremove: true
+    autoclean: true
+    purge: true
+  vars:
+    packages:
+      - libnss-mdns
+      - avahi-daemon
+      - manpages-dev
+      - debconf-i18n
+
+- name: Remove apt package cache (usually 100+ MB)
+  command: apt-get clean
+  become: true
+
+- name: Remove /var/cache/man (usually 20+ MB)
+  file:
+    path: /var/cache/man
+    state: absent
+  become: true
+
+- name: Install required Perl modules
+  cpanm:
+    name: "{{ item }}"
+    system_lib: true
+  become: true
+  with_items:
+    - Switch
+    - Wifi::WpaCtrl
+    - Net::MQTT::Simple
+    - JSON
+    - JSON::Parse
+    - DBD::SQLite
+    - YAML::Tiny
+
+- name: Install root authorized_keys
+  authorized_key:
+    user: root
+    state: present
+    key: "{{ item }}"
+  become: true
+  with_file:
+    - public_keys/root-coachproxy
+
+- name: Set up agressive log file rotation and pruning
+  copy:
+    src: logrotate.conf
+    dest: /etc/logrotate.conf
+  become: true
+
+- name: Check default editor
+  command: update-alternatives --query editor
+  register: current_default_editor
+  changed_when: false
+
+- name: Set vim as default editor instead of nano
+  command: update-alternatives --set editor /usr/bin/vim.basic
+  when: "current_default_editor.stdout.find('Value: /usr/bin/vim.basic') == -1"
+  become: true

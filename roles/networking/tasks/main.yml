@@ -1,0 +1,59 @@
+# Set up networking using systemd-networkd
+#
+# See:
+#   https://raspberrypi.stackexchange.com/a/88631/79608
+#   https://raspberrypi.stackexchange.com/a/78788/79866
+#   https://raspberrypi.stackexchange.com/a/88234/79608
+
+---
+
+- name: Disable classic networking services
+  systemd:
+    name: "{{ item }}"
+    masked: true
+  become: true
+  with_items:
+    - networking
+    - dhcpcd
+
+- name: Enable systemd networking services
+  systemd:
+    name: "{{ item }}"
+    enabled: true
+  become: true
+  with_items:
+    - systemd-networkd
+    - systemd-resolved
+
+- name: Disable IPv6 networking
+  lineinfile:
+    path: /etc/sysctl.conf
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    insertafter: EOF
+  with_items:
+    - { regexp: '^net.ipv6.conf.all.disable_ipv6', line: 'net.ipv6.conf.all.disable_ipv6 = 1' }
+    - { regexp: '^net.ipv6.conf.default.disable_ipv6', line: 'net.ipv6.conf.default.disable_ipv6 = 1' }
+    - { regexp: '^net.ipv6.conf.lo.disable_ipv6', line: 'net.ipv6.conf.lo.disable_ipv6 = 1' }
+  become: true
+
+- name: Symlink /etc/resolv.conf to systemd-resolved version
+  file:
+    src: /run/systemd/resolve/resolv.conf
+    dest: /etc/resolv.conf
+    state: link
+    force: true
+    follow: no
+  become: true
+
+- name: Symlink systemd network configuration files in /coachproxy
+  file:
+    src: /coachproxy/etc/systemd/network/{{ item }}
+    dest: /etc/systemd/network/{{ item }}
+    state: link
+    force: true
+  become: true
+  with_items:
+    - 04-eth0.network
+    - 12-wlan0.network
+
