@@ -32,9 +32,9 @@ const network = global.get('status').network;
 var message = '';
 
 if (!network || !network.WPA || network.WPA.IP === '') {
-    message = "CoachProxy is operating in Direct WiFi mode. Connect to the WiFi network and IP address in the 'CoachProxy Direct WiFi' section below.";
+    message = "CoachProxy is not connected via WiFi.";
 } else {
-    message = "CoachProxy is connected to the WiFi network listed below. Connect to the WiFi network and use the IP address in the 'Your WiFi Network' section below.";
+    message = "CoachProxyOS is connected to the WiFi network listed below.";
 }
 
 // The values that will be displayed are in the `data` and other parameters,
