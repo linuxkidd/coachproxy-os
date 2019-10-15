@@ -57,3 +57,16 @@
     - 04-eth0.network
     - 12-wlan0.network
 
+- name: Create symlink for wlan0 WiFi configuration
+  file:
+    src: /etc/wpa_supplicant/wpa_supplicant.conf
+    dest: /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+    state: link
+    force: true
+  become: true
+
+- name: Enable the new WiFi supplicant
+  systemd:
+    name: "wpa_supplicant@wlan0.service"
+    enabled: true
+  become: true
