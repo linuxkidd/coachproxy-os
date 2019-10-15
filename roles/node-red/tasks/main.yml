@@ -24,7 +24,7 @@
   shell: "yes | /tmp/update-nodejs-and-nodered"
   when: node_red_start.stat.exists == false
 
-- name: Ensure required node-red nodes are installed (be patient for sqlite)
+- name: Ensure required node-red nodes are installed
   npm:
     name: "{{ item }}"
     path: /coachproxy/node-red

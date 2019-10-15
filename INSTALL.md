@@ -70,10 +70,14 @@ To do this, `ssh` into the RPi and issue a `sudo shutdown now` to shut
 it down. Move the SD card to another computer and use software on that
 computer to save the full SD card image to a file.
 
-For example, to capture the SD card image on an Ubuntu Linux server:
+For example, to capture the SD card image on an Ubuntu Linux server,
+with the SD card mounted as disk `sdd`:
 
 ```
-sudo umount /dev/mmcblk0p1 /dev/mmcblk0p2
-sudo dd bs=4M if=/dev/mmcblk0 of=coachproxyos_1.0.img
+sudo umount /dev/sdd1 /dev/sdd2
+sudo dd bs=4M if=/dev/sdd of=coachproxyos_1.0.img
 ```
 
+After capturing the image, a utility like
+[PiShrink](https://github.com/Drewsif/PiShrink) can be used to shrink
+the image for use on smaller SD cards.
