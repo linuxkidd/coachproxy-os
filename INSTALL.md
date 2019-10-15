@@ -62,13 +62,15 @@ $ ansible-playbook coachproxyos.yml
 Creating Reusable Image
 -----------------------
 
-The SD card is now ready to use. However, it's advisable to capture the
+The device is now ready to use. However, it's advisable to capture the
 completed image to a file, so it can be restored in the future rather
 than repeating all the above steps.
 
-For example, to capture the SD card image using an Ubuntu Linux server,
-the following steps can be used, after moving the RPi SD card to the
-Linux server:
+To do this, `ssh` into the RPi and issue a `sudo shutdown now` to shut
+it down. Move the SD card to another computer and use software on that
+computer to save the full SD card image to a file.
+
+For example, to capture the SD card image on an Ubuntu Linux server:
 
 ```
 sudo umount /dev/mmcblk0p1 /dev/mmcblk0p2
