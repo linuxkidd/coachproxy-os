@@ -38,6 +38,11 @@ changes are:
   file was being written. The overlayfs and read-only configuration has
   been removed from CoachProxyOS to reduce complexity and make DIY
   changes easier.
+* The CoachProxyOS operating system image was built approximately one
+  year after the operating system image for CoachProxy v3.x. This means
+  CoachProxyOS includes newer versions of many system and support
+  programs. In theory this should have little or no effect, but it is
+  worth noting.
 
 Other Information
 -----------------
