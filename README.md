@@ -26,14 +26,14 @@ changes are:
   and restoring e-mail notifications is high on the priority list.
 * CoachProxy requires the installation of a second, external WiFi
   adapter, while CoachProxyOS removes this requirement. CoachProxy uses
-  one adapter creates a private hotspot which a user connects to from
-  their device, and from there configures the other adapter to connect to
+  one adapter to create a private hotspot which a user connects to from
+  their browser, and from there configures the other adapter to connect to
   their local WiFi network. This adds significant complexity to the
   software and removing it for a DIY effort greatly simplifies the
   project. With CoachProxyOS, the WiFi configuration must be done by
-  editing files on the operating system image.
+  editing a file on the boot partition of the operating system image.
 * CoachProxy configures its memory card to use a read-only filesystem
-  with a RAM Disk "overlayfs" running on top of it. This was done to
+  with a RAM Disk overlay running on top of it. This was done to
   prevent corruption of the SD card, for example if power was lost while a
   file was being written. The overlayfs and read-only configuration has
   been removed from CoachProxyOS to reduce complexity and make DIY

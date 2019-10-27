@@ -23,3 +23,6 @@ project:
   database entirely and use the new
   [Persistent Context](https://discourse.nodered.org/t/a-guide-to-understanding-persistent-context/4115) feature
   of Node-RED.
+
+* Write documentation for various non-trivial components, such as Remote
+  Access, notifications, presets, and Alexa integration.
