@@ -489,19 +489,19 @@ if ($rebuild_habridge) {
   # Install new ha-bridge config file
   logger("installing new ha-bridge/device.db file");
   system("sudo mv --backup=numbered /tmp/device.db /coachproxy/ha-bridge/");
+}
+
+# Install new node-red config files
+logger("installing new flows_coachproxy.json file");
+system("sudo mv --backup=numbered /tmp/flows_coachproxy.json /coachproxy/node-red/");
+system('/usr/local/bin/mqtt-simple -h localhost -p "GLOBAL/SHUTDOWN" -m "Restarting CoachProxy..."');
+sleep(1);
+if ($reboot) {
+  logger("rebooting CoachProxyOS device");
+  system("sudo /coachproxy/bin/safe_reboot");
 } else {
-  # Install new node-red config files
-  logger("installing new flows_coachproxy.json file");
-  system("sudo mv --backup=numbered /tmp/flows_coachproxy.json /coachproxy/node-red/");
-  system('/usr/local/bin/mqtt-simple -h localhost -p "GLOBAL/SHUTDOWN" -m "Restarting CoachProxy..."');
-  sleep(1);
-  if ($reboot) {
-    logger("rebooting CoachProxyOS device");
-    system("sudo /coachproxy/bin/safe_reboot");
-  } else {
-    system("/coachproxy/bin/version.sh");
-    logger("restarting node-red");
-    # Note: if this script was called from within nodered, the below statement will kill this script.
-    system("sudo systemctl restart nodered");
-  }
+  system("/coachproxy/bin/version.sh");
+  logger("restarting node-red");
+  # Note: if this script was called from within nodered, the below statement will kill this script.
+  system("sudo systemctl restart nodered");
 }
