@@ -361,7 +361,7 @@
             }
         },
         "site": {
-            "name": "CoachProxy",
+            "name": "CoachProxyOS",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "dateFormat": "YYYY/MM/DD",

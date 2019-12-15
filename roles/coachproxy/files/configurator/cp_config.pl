@@ -496,7 +496,7 @@ if ($rebuild_habridge) {
   system('/usr/local/bin/mqtt-simple -h localhost -p "GLOBAL/SHUTDOWN" -m "Restarting CoachProxy..."');
   sleep(1);
   if ($reboot) {
-    logger("rebooting CoachProxy");
+    logger("rebooting CoachProxyOS device");
     system("sudo /coachproxy/bin/safe_reboot");
   } else {
     system("/coachproxy/bin/version.sh");
