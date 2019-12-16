@@ -18,21 +18,13 @@ those of the commercial CoachProxy system. However, several changes have
 been made to make it suitable for an Open Source Project. The major
 changes are:
 
-* CoachProxy's e-mail notification, remote access VPN service, and
-  software update service depend on access to a cloud-based management
-  server. These features have been removed in CoachProxy**OS** to eliminate
-  that dependency and ensure CoachProxyOS can run as a stand-alone device.
-  CoachProxyOS has a new third-party remote access capability built in,
-  and restoring e-mail notifications is high on the priority list.
-* CoachProxy requires the installation of a second, external WiFi
-  adapter, while CoachProxyOS removes this requirement. CoachProxy uses
-  one adapter to create a private hotspot which a user connects to from
-  their browser, and from there configures the other adapter to connect to
-  their local WiFi network. This adds significant complexity to the
-  software and removing it for a DIY effort greatly simplifies the
-  project. With CoachProxyOS, the WiFi configuration must be done by
-  editing a file on the boot partition of the operating system image.
-* CoachProxy configures its memory card to use a read-only filesystem
+* To enable e-mail notifications, users must configure their own
+  SMTP email server settings in the CoachProxyOS interface (SMTP
+  server, port number, username, and password).
+* To configure the WiFi network information, a file must be edited on
+  the boot partition of the CoachProxy operating system image by
+  inserting the microSD card in a computer to edit the file.
+* CoachProxy configured its memory card to use a read-only filesystem
   with a RAM Disk overlay running on top of it. This was done to
   prevent corruption of the SD card, for example if power was lost while a
   file was being written. The overlayfs and read-only configuration has
@@ -41,8 +33,7 @@ changes are:
 * The CoachProxyOS operating system image was built approximately one
   year after the operating system image for CoachProxy v3.x. This means
   CoachProxyOS includes newer versions of many system and support
-  programs. In theory this should have little or no effect, but it is
-  worth noting.
+  programs. In theory this should have no effect.
 
 Other Information
 -----------------
@@ -56,6 +47,14 @@ CoachProxyOS software works.
 
 See the [ROADMAP](ROADMAP.md) file for information on what future
 changes would benefit the project.
+
+Downloads
+---------
+
+For those not willing or able to create the CoachProxyOS software image
+themselves, a fully-functioning downloadable image containing the latest
+changes will periodically be uploaded to the
+[Releases](https://github.com/rvc-proxy/coachproxy-os/releases) page.
 
 Screenshots
 -----------
