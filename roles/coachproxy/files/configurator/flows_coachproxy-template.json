@@ -7073,7 +7073,7 @@
         "order": 2,
         "width": "0",
         "height": "0",
-        "format": "<div style=\"height: 130px;\">\n<p>\n    Welcome to CoachProxyOS!\n</p>\n<p>\n    <br>\n    Please select your year, model, and floor plan\n    below to begin. Note, you may need to scroll down\n    in the menu to find your model or floor plan.\n</p>\n</div>\n",
+        "format": "<div style=\"height: 130px;\">\n<p>\n    Welcome to CoachProxyOS!\n</p>\n<p>\n    <br>\n    Please select your year, model, and floor plan\n    below to begin. You may need to scroll down\n    in the menu to find your model or floor plan.\n</p>\n</div>\n",
         "storeOutMessages": false,
         "fwdInMessages": false,
         "templateScope": "local",
@@ -23185,7 +23185,8 @@
         "y": 1900,
         "wires": [
             [
-                "bceb7ebc.6c1f9"
+                "bceb7ebc.6c1f9",
+                "b2a6e1f.56d592"
             ]
         ]
     },

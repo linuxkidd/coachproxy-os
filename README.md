@@ -13,7 +13,8 @@ Pi operating system.
 Differences from the commercial CoachProxy Software
 ---------------------------------------------------
 
-CoachProxyOS's RV monitoring and control capabilities are identical to
+CoachProxyOS's [RV monitoring and control
+capabilities](https://coachproxy.com/instructions/) are identical to
 those of the commercial CoachProxy system. However, several changes have
 been made to make it suitable for an Open Source Project. The major
 changes are:
@@ -21,19 +22,13 @@ changes are:
 * To enable e-mail notifications, users must configure their own
   SMTP email server settings in the CoachProxyOS interface (SMTP
   server, port number, username, and password).
-* To configure the WiFi network information, a file must be edited on
+* To configure WiFi network information, a file must be edited on
   the boot partition of the CoachProxy operating system image by
   inserting the microSD card in a computer to edit the file.
-* CoachProxy configured its memory card to use a read-only filesystem
-  with a RAM Disk overlay running on top of it. This was done to
-  prevent corruption of the SD card, for example if power was lost while a
-  file was being written. The overlayfs and read-only configuration has
-  been removed from CoachProxyOS to reduce complexity and make DIY
-  changes easier.
-* The CoachProxyOS operating system image was built approximately one
-  year after the operating system image for CoachProxy v3.x. This means
-  CoachProxyOS includes newer versions of many system and support
-  programs. In theory this should have no effect.
+* CoachProxy's memory card was configured with a read-only filesystem
+  to prevent corruption of the SD card, for example if power was lost
+  while a file was being written. This configuration been removed from
+  CoachProxyOS to reduce complexity and make DIY changes easier.
 
 Other Information
 -----------------

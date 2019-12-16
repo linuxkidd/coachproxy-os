@@ -14,17 +14,20 @@ Raspberry Pi (hereafter referred to as RPi) running the Raspbian
 operating system. Installing Raspbian is outside the scope of this
 documentation, however a few links and tips are provided below:
 
-* At this time, the `2018-10-09-raspbian-stretch-lite.zip` image is the
-  only version that has been tested with CoachProxy. It can be downloaded at:
-  [raspbian_lite-2018-10-11](https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2018-10-11/).
+* At this time, the `2019-09-26-raspbian-buster-lite.img` image is the
+  latest version that has been tested with CoachProxy, though any version
+  of Raspbian Buster should work. It can be downloaded at:
+  [raspbian_lite-2019-09-26](https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-09-30/).
 * Instructions for copying the Raspbian image onto an SD card are at:
   [Installing Images](https://www.raspberrypi.org/documentation/installation/installing-images/).
 * Your local WiFi network SSID and passkey must be configured on the Raspbian
-  image, and SSH enabled to allow remote login to the RPi. You can
-  optionally connect the RPi via an ethernet cable and skip the WiFi
-  configuration. Instructions for these settings are at:
+  image, and SSH enabled to allow remote login to the RPi. Instructions for
+  these settings are at:
   [Setting up a RPi Headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
-* Once the base Raspbian image is installed and your WiFi settings and SSH
+  You can optionally connect the RPi via an ethernet cable and skip the WiFi
+  configuration, but must still enable SSH access via the above
+  instructions.
+* After the base Raspbian image is installed and your WiFi settings and SSH
   are configured, insert the SD card into an RPi and power it on.
 
 Once the RPi is connected to your network, determine its IP address by
@@ -58,6 +61,11 @@ $ ansible-playbook coachproxyos.yml
 ```
 
 ![Ansible playbook output](images/ansible-1.png)
+
+Note: the install changes the default editor from `nano` to `vim`. If
+you are not familiar with `vim`, you should delete the bottom code block
+(_Set vim as default editor instead of nano_) from the
+`roles/base_os/tasks/main.yml` file before running `ansible-playbook`.
 
 Creating Reusable Image
 -----------------------

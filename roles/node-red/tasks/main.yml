@@ -31,7 +31,6 @@
   with_items:
     - node-red-dashboard
     - node-red-node-pushover
-    - node-red-node-pushbullet
     - node-red-node-sqlite
     - node-red-contrib-file-function-ext
     - node-red-contrib-throttle
