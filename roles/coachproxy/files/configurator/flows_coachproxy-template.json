@@ -671,6 +671,17 @@
         "collapse": false
     },
     {
+        "id": "b043acd4.87089",
+        "type": "ui_group",
+        "z": "",
+        "name": "Notification SMTP Server",
+        "tab": "4da57d95.96a5cc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "8918319e.52f4",
         "type": "ui_switch",
         "z": "5a05b8f3.894b88",
@@ -21616,7 +21627,11 @@
             [
                 "a41f2c1.cca1ad",
                 "9a43afe.4e3335",
-                "17af52d.10478ad"
+                "17af52d.10478ad",
+                "b028ecd6.261778",
+                "74511b5e.c45cf4",
+                "327053dc.38f1ec",
+                "6c4a8998.9efa5"
             ]
         ]
     },
@@ -21793,19 +21808,6 @@
         "broker": "c1170463.5c7f8",
         "x": 2780,
         "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "7e575f40.e3fc5",
-        "type": "e-mail",
-        "z": "2fdd8124.05e35e",
-        "server": "",
-        "port": "465",
-        "secure": true,
-        "name": "",
-        "dname": "Notification Email",
-        "x": 2770,
-        "y": 1720,
         "wires": []
     },
     {
@@ -22017,8 +22019,8 @@
         "links": [
             "e357c5ad.eaba18"
         ],
-        "x": 2675,
-        "y": 280,
+        "x": 2635,
+        "y": 500,
         "wires": []
     },
     {
@@ -22266,7 +22268,7 @@
             ],
             [],
             [
-                "7e575f40.e3fc5"
+                "b1b6ffec.c0e758"
             ]
         ]
     },
@@ -22562,8 +22564,8 @@
         "payload": "undo",
         "payloadType": "str",
         "topic": "commit",
-        "x": 1730,
-        "y": 380,
+        "x": 1710,
+        "y": 320,
         "wires": [
             [
                 "9a43afe.4e3335",
@@ -22770,6 +22772,448 @@
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b028ecd6.261778",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "settings2.smtp_host",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$globalContext('settings2.smtp_host')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "form.smtp_host",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 480,
+        "wires": [
+            [
+                "2beb48cd.bc9f1"
+            ]
+        ]
+    },
+    {
+        "id": "74511b5e.c45cf4",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "settings2.smtp_port",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$globalContext('settings2.smtp_port')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "form.smtp_port",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 520,
+        "wires": [
+            [
+                "4e1f595b.06eef"
+            ]
+        ]
+    },
+    {
+        "id": "327053dc.38f1ec",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "settings2.smtp_user",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$globalContext('settings2.smtp_user')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "form.smtp_user",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 560,
+        "wires": [
+            [
+                "3a108da8.621912"
+            ]
+        ]
+    },
+    {
+        "id": "6c4a8998.9efa5",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "settings2.smtp_password",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$globalContext('settings2.smtp_password')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "form.smtp_password",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1950,
+        "y": 600,
+        "wires": [
+            [
+                "a98ddc00.839c1"
+            ]
+        ]
+    },
+    {
+        "id": "2beb48cd.bc9f1",
+        "type": "ui_text_input",
+        "z": "2fdd8124.05e35e",
+        "name": "SMTP Server",
+        "label": "SMTP Server Name",
+        "tooltip": "e.g. smtp.gmail.com",
+        "group": "b043acd4.87089",
+        "order": 2,
+        "width": "",
+        "height": "",
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "smtp_host",
+        "x": 2190,
+        "y": 480,
+        "wires": [
+            [
+                "4275c6af.b94258"
+            ]
+        ]
+    },
+    {
+        "id": "4e1f595b.06eef",
+        "type": "ui_text_input",
+        "z": "2fdd8124.05e35e",
+        "name": "SMTP Port",
+        "label": "SMTP Server Port",
+        "tooltip": "e.g. 587",
+        "group": "b043acd4.87089",
+        "order": 3,
+        "width": "",
+        "height": "",
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "smtp_port",
+        "x": 2190,
+        "y": 520,
+        "wires": [
+            [
+                "4275c6af.b94258"
+            ]
+        ]
+    },
+    {
+        "id": "657e579.184f228",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "group": "b043acd4.87089",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "label": "Save",
+        "color": "",
+        "icon": "fa-check",
+        "payload": "save",
+        "payloadType": "str",
+        "topic": "commit",
+        "x": 2170,
+        "y": 640,
+        "wires": [
+            [
+                "9767a76d.1419a"
+            ]
+        ]
+    },
+    {
+        "id": "13ab390c.eaec7f",
+        "type": "ui_template",
+        "z": "2fdd8124.05e35e",
+        "group": "b043acd4.87089",
+        "name": "SMTP Info",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "format": "<div layout=\"column\" layout-align=\"space-between\">\n<p><b>E-mail Server Setup:</b></p>\n<p>Enter your E-mail SMTP Server information:</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 2190,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a108da8.621912",
+        "type": "ui_text_input",
+        "z": "2fdd8124.05e35e",
+        "name": "SMTP Username",
+        "label": "SMTP Username",
+        "tooltip": "",
+        "group": "b043acd4.87089",
+        "order": 4,
+        "width": "",
+        "height": "",
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "smtp_user",
+        "x": 2210,
+        "y": 560,
+        "wires": [
+            [
+                "4275c6af.b94258"
+            ]
+        ]
+    },
+    {
+        "id": "a98ddc00.839c1",
+        "type": "ui_text_input",
+        "z": "2fdd8124.05e35e",
+        "name": "SMTP Password",
+        "label": "SMTP Password",
+        "tooltip": "",
+        "group": "b043acd4.87089",
+        "order": 5,
+        "width": "",
+        "height": "",
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "smtp_password",
+        "x": 2210,
+        "y": 600,
+        "wires": [
+            [
+                "4275c6af.b94258"
+            ]
+        ]
+    },
+    {
+        "id": "4275c6af.b94258",
+        "type": "file function",
+        "z": "2fdd8124.05e35e",
+        "name": "form_field_save.js",
+        "filename": ".node-red/js/form_field_save.js",
+        "reloadfile": false,
+        "outputs": 1,
+        "x": 2450,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9767a76d.1419a",
+        "type": "function",
+        "z": "2fdd8124.05e35e",
+        "name": "Save SMTP Settings",
+        "func": "const topics = ['smtp_host', 'smtp_port', 'smtp_user', 'smtp_password'];\nvar msgs = [];\n\ntopics.forEach(function(topic) {\n  const value = global.get('form')[topic] || '';\n  const newmsg = { topic: topic, payload: value };\n  msgs.push(newmsg);\n});\n\nreturn [ msgs ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2460,
+        "y": 640,
+        "wires": [
+            [
+                "2ad4a4a5.c0435c"
+            ]
+        ]
+    },
+    {
+        "id": "effffbd9.b9af7",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "group": "b043acd4.87089",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "label": "Undo",
+        "color": "",
+        "icon": "fa-times",
+        "payload": "undo",
+        "payloadType": "str",
+        "topic": "commit",
+        "x": 1670,
+        "y": 540,
+        "wires": [
+            [
+                "b028ecd6.261778",
+                "74511b5e.c45cf4",
+                "327053dc.38f1ec",
+                "6c4a8998.9efa5"
+            ]
+        ]
+    },
+    {
+        "id": "b1b6ffec.c0e758",
+        "type": "simple-sendmail",
+        "z": "2fdd8124.05e35e",
+        "name": "simple sendmail",
+        "x": 2760,
+        "y": 1720,
+        "wires": [
+            [
+                "188160bb.3534f7"
+            ]
+        ]
+    },
+    {
+        "id": "188160bb.3534f7",
+        "type": "ui_text",
+        "z": "2fdd8124.05e35e",
+        "group": "d0c7f134.375fd",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "Mail Notification Status",
+        "label": "Succeeded: {{msg.payload.accepted.length}}",
+        "format": "",
+        "layout": "col-center",
+        "x": 3010,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "9ab94ac.b9e2b38",
+        "type": "ui_button",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "group": "d0c7f134.375fd",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Send Test Message",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "icon": "fa-envelope-o",
+        "payload": "test",
+        "payloadType": "str",
+        "topic": "commit",
+        "x": 1990,
+        "y": 1900,
+        "wires": [
+            [
+                "b4cc8482.ebf358"
+            ]
+        ]
+    },
+    {
+        "id": "b4cc8482.ebf358",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "This is a test notification from CoachProxyOS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "subject",
+                "pt": "msg",
+                "to": "CoachProxyOS Alert!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2300,
+        "y": 1900,
+        "wires": [
+            [
+                "bceb7ebc.6c1f9"
+            ]
+        ]
+    },
+    {
+        "id": "bceb7ebc.6c1f9",
+        "type": "change",
+        "z": "2fdd8124.05e35e",
+        "name": "Clear output",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{'accepted': []}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2510,
+        "y": 1900,
+        "wires": [
+            [
+                "188160bb.3534f7"
+            ]
         ]
     }
 ]

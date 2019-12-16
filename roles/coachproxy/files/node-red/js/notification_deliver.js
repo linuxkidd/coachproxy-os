@@ -23,6 +23,8 @@ let email_msg = {};
 
 msg.topic = null;  // Block existing topic from passing through
 
+// Pushover message
+
 let pushover_key = global.get('settings2')['pushover_key'];
 if (pushover_key) {
     push_msg.headers = { "content-type": "application/x-www-form-urlencoded" };
@@ -34,22 +36,43 @@ if (pushover_key) {
     };
 }
 
+// Email message
+
+let smtp_host = global.get('settings2')['smtp_host'];
+let smtp_port = global.get('settings2')['smtp_port'];
+let smtp_user = global.get('settings2')['smtp_user'];
+let smtp_pass = global.get('settings2')['smtp_password'];
+
+let transport = {};
+transport.host = smtp_host;
+transport.port = smtp_port;
+transport.auth = {};
+transport.auth.user = smtp_user;
+transport.auth.pass = smtp_pass;
+
 let email1 = global.get('settings2')['notify_email1'];
 let email2 = global.get('settings2')['notify_email2'];
 
-// If the user only added email2, copy it to email1
+let options = {};
+options.from = smtp_user;
+options.subject = msg.subject;
+options.text = msg.payload;
+
+// If the user only added email2, change it to email1
 if (email2 && !email1) {
     email1 = email2;
     email2 = '';
 }
 
 if (email1) {
-    email_msg.to = email1;
+    options.to = email1;
     if (email2) {
-        email_msg.to += ',' + email2;
+        options.to += ',' + email2;
     }
-    email_msg.topic = msg.subject;
-    email_msg.payload = msg.payload;
+
+  email_msg = { 'mail': { 'transport': transport, 'options': options } };
 }
+
+// Deliver
 
 return [msg, push_msg, email_msg];

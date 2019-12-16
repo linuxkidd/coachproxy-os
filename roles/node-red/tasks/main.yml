@@ -30,7 +30,6 @@
     path: /coachproxy/node-red
   with_items:
     - node-red-dashboard
-    - node-red-node-email
     - node-red-node-pushover
     - node-red-node-pushbullet
     - node-red-node-sqlite
@@ -42,6 +41,7 @@
     - node-red-contrib-dsm
     - node-red-contrib-simpletime
     - node-red-contrib-schedex
+    - node-red-contrib-simple-sendmail
 
 - name: Replace boilerplate Node-RED text in blank dashboard page
   replace:
