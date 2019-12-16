@@ -13,10 +13,10 @@ Pi operating system.
 Differences from the commercial CoachProxy Software
 ---------------------------------------------------
 
-CoachProxyOS's [RV monitoring and control
-capabilities](https://coachproxy.com/instructions/) are identical to
-those of the commercial CoachProxy system. However, several changes have
-been made to make it suitable for an Open Source Project. The major
+CoachProxyOS's RV monitoring and control capabilities are [identical to
+those of the commercial CoachProxy
+system](https://coachproxy.com/instructions/). However, several changes
+have been made to make it suitable for an Open Source Project. The major
 changes are:
 
 * To enable e-mail notifications, users must configure their own
@@ -42,11 +42,11 @@ CoachProxyOS image from source using Ansible.
 [Download_Image](docs/Download_Image.md): instructions for downloading
 a pre-built image and installing it on a CoachProxyOS device.
 
-[Software_Overview](Software_Overview.md): information on how the device
+[Software_Overview](docs/Software_Overview.md): information on how the device
 and software communicates with an RV, and how the CoachProxyOS software
 works.
 
-[Roadmap](Roadmap.md): information on what future changes would benefit
+[Roadmap](docs/Roadmap.md): information on what future changes would benefit
 the project.
 
 Screenshots
