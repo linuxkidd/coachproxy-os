@@ -20781,8 +20781,8 @@
         ],
         "payload": "",
         "topic": "notif_type",
-        "x": 2200,
-        "y": 520,
+        "x": 2180,
+        "y": 780,
         "wires": [
             [
                 "f660ee71.1ff5",
@@ -20816,8 +20816,8 @@
         ],
         "payload": "",
         "topic": "notif_test",
-        "x": 2200,
-        "y": 640,
+        "x": 2180,
+        "y": 900,
         "wires": [
             [
                 "f660ee71.1ff5"
@@ -20838,8 +20838,8 @@
         "mode": "text",
         "delay": 300,
         "topic": "notif_value",
-        "x": 2190,
-        "y": 560,
+        "x": 2170,
+        "y": 820,
         "wires": [
             [
                 "f660ee71.1ff5"
@@ -20863,8 +20863,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 2190,
-        "y": 680,
+        "x": 2170,
+        "y": 940,
         "wires": [
             [
                 "9e269e56.8db"
@@ -20883,8 +20883,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 2190,
-        "y": 600,
+        "x": 2170,
+        "y": 860,
         "wires": []
     },
     {
@@ -20895,8 +20895,8 @@
         "filename": ".node-red/js/form_field_save.js",
         "reloadfile": false,
         "outputs": 1,
-        "x": 2410,
-        "y": 560,
+        "x": 2390,
+        "y": 820,
         "wires": [
             []
         ]
@@ -20909,8 +20909,8 @@
         "links": [
             "e357c5ad.eaba18"
         ],
-        "x": 2835,
-        "y": 680,
+        "x": 2815,
+        "y": 940,
         "wires": []
     },
     {
@@ -20918,8 +20918,8 @@
         "type": "ui_ui_control",
         "z": "2fdd8124.05e35e",
         "name": "Tab Selected",
-        "x": 1670,
-        "y": 540,
+        "x": 1650,
+        "y": 800,
         "wires": [
             [
                 "534dbf84.f6e35",
@@ -20947,8 +20947,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 540,
+        "x": 1970,
+        "y": 800,
         "wires": [
             [
                 "cf4a966e.f868f8",
@@ -20965,8 +20965,8 @@
         "func": "const max_rules = 12;\n\nconst tests = { 'is below': '<', 'is above': '>', 'changes': 'changes' };\nlet notifs = global.get('settings2')['notify_rules'] || [];\n\nnotifs.sort((a,b) => a.notif_type.localeCompare(b.notif_type));\n\nfor (let notif in notifs) {\n    let n = notifs[notif];\n    n.notif_testval = tests[n.notif_test] + ' ' + n.notif_value + n.notif_unit;\n}\n\nreturn [{ payload: notifs }, { enabled: notifs.length < max_rules } ];\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1980,
-        "y": 960,
+        "x": 1960,
+        "y": 1220,
         "wires": [
             [
                 "2dab49fe.24e916",
@@ -21011,8 +21011,8 @@
         "label": "{{msg.payload[1].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 840,
+        "x": 2170,
+        "y": 1100,
         "wires": []
     },
     {
@@ -21027,8 +21027,8 @@
         "label": "{{msg.payload[1].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 840,
+        "x": 2290,
+        "y": 1100,
         "wires": []
     },
     {
@@ -21048,8 +21048,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "1",
-        "x": 2440,
-        "y": 840,
+        "x": 2420,
+        "y": 1100,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21068,8 +21068,8 @@
         "label": "{{msg.payload[2].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 880,
+        "x": 2170,
+        "y": 1140,
         "wires": []
     },
     {
@@ -21084,8 +21084,8 @@
         "label": "{{msg.payload[2].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 880,
+        "x": 2290,
+        "y": 1140,
         "wires": []
     },
     {
@@ -21105,8 +21105,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "2",
-        "x": 2440,
-        "y": 880,
+        "x": 2420,
+        "y": 1140,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21125,8 +21125,8 @@
         "label": "{{msg.payload[3].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 920,
+        "x": 2170,
+        "y": 1180,
         "wires": []
     },
     {
@@ -21141,8 +21141,8 @@
         "label": "{{msg.payload[3].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 920,
+        "x": 2290,
+        "y": 1180,
         "wires": []
     },
     {
@@ -21162,8 +21162,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "3",
-        "x": 2440,
-        "y": 920,
+        "x": 2420,
+        "y": 1180,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21182,8 +21182,8 @@
         "label": "{{msg.payload[4].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 960,
+        "x": 2170,
+        "y": 1220,
         "wires": []
     },
     {
@@ -21198,8 +21198,8 @@
         "label": "{{msg.payload[4].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 960,
+        "x": 2290,
+        "y": 1220,
         "wires": []
     },
     {
@@ -21219,8 +21219,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "4",
-        "x": 2440,
-        "y": 960,
+        "x": 2420,
+        "y": 1220,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21239,8 +21239,8 @@
         "label": "{{msg.payload[5].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 1000,
+        "x": 2170,
+        "y": 1260,
         "wires": []
     },
     {
@@ -21255,8 +21255,8 @@
         "label": "{{msg.payload[5].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 1000,
+        "x": 2290,
+        "y": 1260,
         "wires": []
     },
     {
@@ -21276,8 +21276,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "5",
-        "x": 2440,
-        "y": 1000,
+        "x": 2420,
+        "y": 1260,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21296,8 +21296,8 @@
         "label": "{{msg.payload[6].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 1040,
+        "x": 2170,
+        "y": 1300,
         "wires": []
     },
     {
@@ -21312,8 +21312,8 @@
         "label": "{{msg.payload[6].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 1040,
+        "x": 2290,
+        "y": 1300,
         "wires": []
     },
     {
@@ -21333,8 +21333,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "6",
-        "x": 2440,
-        "y": 1040,
+        "x": 2420,
+        "y": 1300,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21353,8 +21353,8 @@
         "label": "{{msg.payload[7].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 1080,
+        "x": 2170,
+        "y": 1340,
         "wires": []
     },
     {
@@ -21369,8 +21369,8 @@
         "label": "{{msg.payload[7].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 1080,
+        "x": 2290,
+        "y": 1340,
         "wires": []
     },
     {
@@ -21390,8 +21390,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "7",
-        "x": 2440,
-        "y": 1080,
+        "x": 2420,
+        "y": 1340,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21410,8 +21410,8 @@
         "label": "{{msg.payload[8].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 1120,
+        "x": 2170,
+        "y": 1380,
         "wires": []
     },
     {
@@ -21426,8 +21426,8 @@
         "label": "{{msg.payload[8].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 1120,
+        "x": 2290,
+        "y": 1380,
         "wires": []
     },
     {
@@ -21447,8 +21447,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "8",
-        "x": 2440,
-        "y": 1120,
+        "x": 2420,
+        "y": 1380,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21467,8 +21467,8 @@
         "label": "{{msg.payload[9].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 1160,
+        "x": 2170,
+        "y": 1420,
         "wires": []
     },
     {
@@ -21483,8 +21483,8 @@
         "label": "{{msg.payload[9].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 1160,
+        "x": 2290,
+        "y": 1420,
         "wires": []
     },
     {
@@ -21504,8 +21504,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "9",
-        "x": 2440,
-        "y": 1160,
+        "x": 2420,
+        "y": 1420,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21524,8 +21524,8 @@
         "label": "{{msg.payload[0].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2190,
-        "y": 800,
+        "x": 2170,
+        "y": 1060,
         "wires": []
     },
     {
@@ -21540,8 +21540,8 @@
         "label": "{{msg.payload[0].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2310,
-        "y": 800,
+        "x": 2290,
+        "y": 1060,
         "wires": []
     },
     {
@@ -21561,8 +21561,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "0",
-        "x": 2440,
-        "y": 800,
+        "x": 2420,
+        "y": 1060,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -21577,8 +21577,8 @@
         "func": "// Remove a notification rule, update the settings on disk,\n// and refresh the list.\n\nlet notifs = global.get('settings2')['notify_rules'] || [];\nnotifs.splice(msg.topic, 1);  // This changes in global context\n\nreturn { topic: 'notify_rules', payload: JSON.stringify(notifs) };",
         "outputs": 1,
         "noerr": 0,
-        "x": 2670,
-        "y": 880,
+        "x": 2650,
+        "y": 1140,
         "wires": [
             [
                 "bc50fc72.5c00a",
@@ -21598,8 +21598,8 @@
         "label": "",
         "format": "Your notification rules:",
         "layout": "row-center",
-        "x": 2240,
-        "y": 760,
+        "x": 2220,
+        "y": 1020,
         "wires": []
     },
     {
@@ -21761,8 +21761,8 @@
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 2240,
-        "y": 480,
+        "x": 2220,
+        "y": 740,
         "wires": [
             []
         ]
@@ -21776,8 +21776,8 @@
         "ret": "txt",
         "url": "https://api.pushover.net/1/messages.json",
         "tls": "",
-        "x": 2950,
-        "y": 1500,
+        "x": 2770,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -21791,8 +21791,8 @@
         "qos": "",
         "retain": "",
         "broker": "c1170463.5c7f8",
-        "x": 2960,
-        "y": 1460,
+        "x": 2780,
+        "y": 1640,
         "wires": []
     },
     {
@@ -21804,8 +21804,8 @@
         "secure": true,
         "name": "",
         "dname": "Notification Email",
-        "x": 2950,
-        "y": 1540,
+        "x": 2770,
+        "y": 1720,
         "wires": []
     },
     {
@@ -21961,8 +21961,8 @@
         "filename": ".node-red/js/notification_menu_options.js",
         "reloadfile": false,
         "outputs": 1,
-        "x": 1940,
-        "y": 500,
+        "x": 1920,
+        "y": 760,
         "wires": [
             [
                 "cf4a966e.f868f8"
@@ -21977,8 +21977,8 @@
         "filename": ".node-red/js/notification_submenu_options.js",
         "reloadfile": false,
         "outputs": 3,
-        "x": 1930,
-        "y": 600,
+        "x": 1910,
+        "y": 860,
         "wires": [
             [
                 "5e908b9c.0afec4"
@@ -22000,8 +22000,8 @@
         "filename": ".node-red/js/notification_save.js",
         "reloadfile": false,
         "outputs": 1,
-        "x": 2410,
-        "y": 680,
+        "x": 2390,
+        "y": 940,
         "wires": [
             [
                 "bc50fc72.5c00a",
@@ -22033,8 +22033,8 @@
         "label": "{{msg.payload[10].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2200,
-        "y": 1200,
+        "x": 2180,
+        "y": 1460,
         "wires": []
     },
     {
@@ -22049,8 +22049,8 @@
         "label": "{{msg.payload[10].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2330,
-        "y": 1200,
+        "x": 2310,
+        "y": 1460,
         "wires": []
     },
     {
@@ -22070,8 +22070,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "10",
-        "x": 2460,
-        "y": 1200,
+        "x": 2440,
+        "y": 1460,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -22090,8 +22090,8 @@
         "label": "{{msg.payload[11].notif_type}}",
         "format": "",
         "layout": "row-left",
-        "x": 2200,
-        "y": 1240,
+        "x": 2180,
+        "y": 1500,
         "wires": []
     },
     {
@@ -22106,8 +22106,8 @@
         "label": "{{msg.payload[11].notif_testval}}",
         "format": "",
         "layout": "row-left",
-        "x": 2330,
-        "y": 1240,
+        "x": 2310,
+        "y": 1500,
         "wires": []
     },
     {
@@ -22127,8 +22127,8 @@
         "payload": "delete",
         "payloadType": "str",
         "topic": "11",
-        "x": 2460,
-        "y": 1240,
+        "x": 2440,
+        "y": 1500,
         "wires": [
             [
                 "a14cd88f.1a8788"
@@ -22178,8 +22178,8 @@
         "topic": "CP/TANK_STATUS/#",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2170,
-        "y": 1400,
+        "x": 1990,
+        "y": 1580,
         "wires": [
             [
                 "a588a38c.08e74"
@@ -22194,8 +22194,8 @@
         "topic": "CP/IGNITION",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2190,
-        "y": 1540,
+        "x": 2010,
+        "y": 1720,
         "wires": [
             [
                 "aa0e517d.843a4"
@@ -22210,8 +22210,8 @@
         "topic": "CP/PARKBRAKE",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2180,
-        "y": 1580,
+        "x": 2000,
+        "y": 1760,
         "wires": [
             [
                 "aa0e517d.843a4"
@@ -22226,8 +22226,8 @@
         "topic": "CP/GENERATOR",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2180,
-        "y": 1620,
+        "x": 2000,
+        "y": 1800,
         "wires": [
             [
                 "aa0e517d.843a4"
@@ -22242,8 +22242,8 @@
         "filename": ".node-red/js/notification_value_monitor.js",
         "reloadfile": false,
         "outputs": 1,
-        "x": 2440,
-        "y": 1440,
+        "x": 2260,
+        "y": 1620,
         "wires": [
             [
                 "b2a6e1f.56d592"
@@ -22258,8 +22258,8 @@
         "filename": ".node-red/js/notification_deliver.js",
         "reloadfile": false,
         "outputs": 3,
-        "x": 2720,
-        "y": 1500,
+        "x": 2540,
+        "y": 1680,
         "wires": [
             [
                 "93012ad8.0aea38"
@@ -22278,8 +22278,8 @@
         "topic": "CP/THERMISTOR_TEMP/#",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2150,
-        "y": 1440,
+        "x": 1970,
+        "y": 1620,
         "wires": [
             [
                 "a588a38c.08e74"
@@ -22294,8 +22294,8 @@
         "filename": ".node-red/js/notification_state_monitor.js",
         "reloadfile": false,
         "outputs": 1,
-        "x": 2440,
-        "y": 1580,
+        "x": 2260,
+        "y": 1760,
         "wires": [
             [
                 "b2a6e1f.56d592"
@@ -22310,8 +22310,8 @@
         "topic": "CP/BATTERY_VOLTS/#",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2160,
-        "y": 1480,
+        "x": 1980,
+        "y": 1660,
         "wires": [
             [
                 "a588a38c.08e74"
@@ -22336,8 +22336,8 @@
         "topic": "CP/AC_SOURCE",
         "qos": "2",
         "broker": "c1170463.5c7f8",
-        "x": 2180,
-        "y": 1660,
+        "x": 2000,
+        "y": 1840,
         "wires": [
             [
                 "aa0e517d.843a4"
