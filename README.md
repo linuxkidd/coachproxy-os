@@ -30,26 +30,24 @@ changes are:
   while a file was being written. This configuration been removed from
   CoachProxyOS to reduce complexity and make DIY changes easier.
 
-Other Information
------------------
+Documentation
+-------------
 
-See the [INSTALL](INSTALL.md) file for instructions on creating a
-CoachProxyOS image using Ansible.
+[Build_Device](docs/Build_Device.md): instructions for assembling a
+CoachProxyOS device from a Raspberry Pi computer.
 
-See the [HOW_IT_WORKS](HOW_IT_WORKS.md) file for information on how to
-build a Raspberry Pi device that can communicate with an RV, and how the
-CoachProxyOS software works.
+[Build_Image](docs/Build_Image.md): instructions for creating a
+CoachProxyOS image from source using Ansible.
 
-See the [ROADMAP](ROADMAP.md) file for information on what future
-changes would benefit the project.
+[Download_Image](docs/Download_Image.md): instructions for downloading
+a pre-built image and installing it on a CoachProxyOS device.
 
-Downloads
----------
+[Software_Overview](Software_Overview.md): information on how the device
+and software communicates with an RV, and how the CoachProxyOS software
+works.
 
-For those not willing or able to create the CoachProxyOS software image
-themselves, a fully-functioning downloadable image containing the latest
-changes will periodically be uploaded to the
-[Releases](https://github.com/rvc-proxy/coachproxy-os/releases) page.
+[Roadmap](Roadmap.md): information on what future changes would benefit
+the project.
 
 Screenshots
 -----------
