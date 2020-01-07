@@ -24,11 +24,20 @@ mode power supply) will enable the RPi to be powered by the CAN Bus
 network, eliminating the need for a separate power supply. For example:
 https://copperhilltech.com/pican2-can-interface-for-raspberry-pi-with-smps/
 
+_Note: If purchasing this PiCan2 board from Copperhill Tech, ensure that
+the 120 ohm termination resistor is disabled. To do this, remove any
+jumper installed in the JP3 pins on the board (see section 1.6 of the
+owners manual that comes with the PiCan2 board)._
+
 For connection to a Tiffin motorhome, a 2- or 4-conductor CAN Bus cable
 will need to be connected to the PiCAN2 board. A length of Category 6
 ethernet cable (contaiing four pairs of wires) can be used, with one
 pair of wires used for CAN communication. A second pair of wires may be
-usable for 12V power, depending on the wire's gauge.
+usable for 12V power, depending on the wire's gauge. see section 2.1.1
+of the [RVC Specification](http://www.rv-c.com/?q=node/75) for more
+information (excerpt attached below):
+
+![RVC Spec 2.1.1](../images/canbus_wiring.jpg)
 
 A [3M Mini-Clamp
 Plug](https://www.digikey.com/product-detail/en/3m/37104-2165-000%20FL%20100/3M155844-ND/1238214)
