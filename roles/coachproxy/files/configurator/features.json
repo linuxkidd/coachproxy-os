@@ -8,6 +8,76 @@
     }
   },
 
+  "2020": {
+    "Allegro_RED": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 20 },
+          "6": { "name": "Accent", "location": "DS", "order": 20 },
+          "7": { "name": "Accent", "location": "PS", "order": 20 },
+          "8": { "name": "Galley", "location": "M", "order": 15 },
+          "9": { "name": "Sconce", "location": "DS", "order": 20 },
+          "10": { "name": "Accent", "location": "M", "order": 11 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 1 },
+          "14": { "name": "Task", "location": "PS", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "16": { "name": "Vanity", "location": "MB", "order": 1 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "28": { "name": "Ceiling", "location": "C", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Shades": {
+          "4": { "name": "Galley", "location": "MS", "order": 1, "single": "night" }
+        },
+        "Awnings": {
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 10 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 10 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 0,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "33_AA": {
+        "Lights": {
+          "13": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "37_BA": {
+        "Lights": {
+          "6": "",
+          "7": "",
+          "16": "",
+          "28": ""
+        }
+      },
+      "37_PA": {
+        "Lights": {
+          "13": "",
+          "16": "",
+          "28": ""
+        }
+      }
+    }
+  },
+
   "2019": {
     "Allegro_Bus": {
       "Default": {
