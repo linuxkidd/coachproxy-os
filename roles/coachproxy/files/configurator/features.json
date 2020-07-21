@@ -36,8 +36,8 @@
           "4": { "name": "Galley", "location": "MS", "order": 1, "single": "night" }
         },
         "Awnings": {
-          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 10 },
-          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 10 }
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 15 }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
@@ -639,7 +639,7 @@
           "1 6 7 8": { "name": "Main", "location": "GS", "order": 3, "voiceid": 252 }
         },
         "Awnings": {
-          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
@@ -757,7 +757,7 @@
           "15": { "name": "Windshield", "location": "CS", "order": 1 }
         },
         "Awnings": {
-          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
@@ -848,7 +848,7 @@
           "95": { "name": "Door", "location": "E", "order": 1 }
         },
         "Awnings": {
-          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 },
           "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
         },
         "Vents": {
@@ -913,7 +913,7 @@
           "95": { "name": "Door", "location": "E", "order": 1 }
         },
         "Awnings": {
-          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 },
           "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
         },
         "Vents": {
@@ -1216,7 +1216,7 @@
           "96": { "name": "Cargo", "location": "E", "order": 15 }
         },
         "Awnings": {
-          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15  }
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20  }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
@@ -1304,7 +1304,7 @@
           "95": { "name": "Door", "location": "E", "order": 10 }
         },
         "Awnings": {
-          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
@@ -1579,7 +1579,7 @@
           "96": { "name": "Cargo", "location": "E", "order": 15 }
         },
         "Awnings": {
-          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 }
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
         },
         "Vents": {
           "galley": { "fan": 25, "lidup": 26, "liddn": 27, "indicator": 39 },
@@ -1660,7 +1660,7 @@
           "95": { "name": "Door", "location": "E", "order": 10 }
         },
         "Awnings": {
-          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 },
           "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
         },
         "Vents": {
@@ -1959,7 +1959,7 @@
           "rear": { "fan": 32, "lidup": 33, "liddn": 34, "indicator": 114 }
         },
         "Awnings": {
-          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 15 },
+          "3d": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 },
           "3n": { "name": "Patio", "type": "night", "order": 2, "duration": 20 }
         },
         "Pump": 93,
