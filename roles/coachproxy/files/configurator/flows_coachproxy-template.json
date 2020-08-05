@@ -2803,12 +2803,13 @@
         "z": "5a05b8f3.894b88",
         "name": "Gen Controls Enable",
         "label": "Gen Controls Enable",
+        "tooltip": "",
         "group": "a4a573ee.d6bdf",
         "order": 3,
         "width": "6",
         "height": "1",
         "passthru": false,
-        "decouple": "false",
+        "decouple": "true",
         "topic": "genstartenable",
         "onvalue": "1",
         "onvalueType": "num",
@@ -4022,7 +4023,8 @@
                 "72ef6a2f.590cdc"
             ],
             [
-                "6de4b0ab.83a33"
+                "6de4b0ab.83a33",
+                "c3ddc36b.81805"
             ]
         ]
     },
@@ -23214,6 +23216,22 @@
         "wires": [
             [
                 "188160bb.3534f7"
+            ]
+        ]
+    },
+    {
+        "id": "c3ddc36b.81805",
+        "type": "function",
+        "z": "5a05b8f3.894b88",
+        "name": "reset switch",
+        "func": "if (msg.payload == \"Controls disabled\")\n    return { payload: 0 };\nelse\n    return { payload: 1 };",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 4320,
+        "wires": [
+            [
+                "72ef6a2f.590cdc"
             ]
         ]
     }
