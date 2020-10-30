@@ -8,6 +8,112 @@
     }
   },
 
+  "2021": {
+    "_comment": "2021",
+    "Phaeton": {
+      "Default": {
+        "MaxDimmableLight": 12,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Ceiling", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "M", "order": 15 },
+          "6": { "name": "Slide", "location": "PS", "order": 10 },
+          "7": { "name": "Sconce", "location": "M", "order": 20 },
+          "8": { "name": "Slide", "location": "DS", "order": 10 },
+          "9": { "name": "Courtesy", "location": "DS", "order": 15 },
+          "10": { "name": "Courtesy", "location": "BR", "order": 20 },
+          "11": { "name": "Sconce", "location": "BR", "order": 30 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "13": { "name": "Ceiling", "location": "RB", "order": 10 },
+          "14": { "name": "Task", "location": "DS", "order": 20 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "16": { "name": "Vanity", "location": "MB", "order": 20 },
+          "17": { "name": "Vanity", "location": "RB", "order": 20 },
+          "18": { "name": "TV Accent", "location": "M", "order": 30 },
+          "19": { "name": "Accent", "location": "M", "order": 25 },
+          "20": { "name": "Accent 2", "location": "M", "order": 26 },
+          "21": { "name": "Accent", "location": "BR", "order": 51 },
+          "28": { "name": "Ceiling", "location": "C", "order": 30 },
+          "75": { "name": "Door", "location": "E", "order": 5 },
+          "85": { "name": "Undercoach", "location": "E", "order": 35 },
+          "85": { "name": "Windshield", "location": "E", "order": 36 },
+          "87": { "name": "Map", "location": "PS", "order": 45 },
+          "91": { "name": "Road", "location": "E", "order": 20 },
+          "92": { "name": "Porch", "location": "E", "order": 10 }
+        },
+        "Shades": {
+          "15": { "name": "Windshield", "location": "CS", "order": 1 },
+          "23": { "name": "Galley", "location": "MS", "order": 5 , "single": "night" }
+        },
+        "Awnings": {
+          "5": { "name": "Entry Door", "type": "day", "order": 1, "duration": 22 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 32, "lidup": 33, "liddn": 34 }
+        },
+        "Locks": {
+          "cargo": [123, 124],
+          "entry": [127, 128]
+        },
+        "Pump": 125,
+        "Elecheat": 129,
+        "Elecheat_AC": 210,
+        "Fuelheat": 130,
+        "Preheat": 131,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1
+      },
+      "37_BH": {
+        "Lights": {
+          "5": "",
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "28": ""
+        }
+      },
+      "40_AH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": "",
+          "28": ""
+        }
+      },
+      "40_IH": {
+        "Lights": {
+          "5": "",
+          "16": "",
+          "18": "",
+          "28": ""
+        }
+      },
+      "40_QBH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "14": { "location": "PS" },
+          "18": { "name": "Hutch Accent" },
+          "28": ""
+        }
+      },
+      "40_QKH": {
+        "Lights": {
+          "9": { "location": "PS" },
+          "13": "",
+          "14": { "location": "PS" },
+          "17": ""
+        }
+      },
+      "44_OH": { }
+    }
+  },
+
   "2020": {
     "Allegro_RED": {
       "Default": {
