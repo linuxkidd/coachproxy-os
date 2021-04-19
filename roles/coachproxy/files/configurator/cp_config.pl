@@ -291,7 +291,7 @@ if ($features->{'GeneratorStatus'} == 0) {
 my $gencontrol = 'true';
 my $settings_generator_version = '1';
 
-if (grep(/^$model$/, ('Allegro_RED', 'Phaeton', 'Allegro_Bus', 'Zephyr'))) {
+if (grep(/^$model$/, ('Allegro_Breeze', 'Allegro_RED', 'Phaeton', 'Allegro_Bus', 'Zephyr'))) {
   $settings_generator_version = '0' if ($year == 2014);
   $settings_generator_version = '1' if ($year == 2015);
   $settings_generator_version = '2' if ($year >= 2016);
@@ -305,6 +305,14 @@ if (grep(/^$model$/, ('Allegro_RED', 'Phaeton', 'Allegro_Bus', 'Zephyr'))) {
     $settings_generator_version = '2';
     if ($year < 2019) {
       # Generator controls not included on RED until 2019
+      $gencontrol = 'false';
+      push @tags, '/gencontrol/';
+    }
+  }
+  if ($model eq 'Allegro_Breeze') {
+    $settings_generator_version = '2';
+    if ($year < 2020) {
+      # I don't know if Generator controls were included on Breeze before 2020
       $gencontrol = 'false';
       push @tags, '/gencontrol/';
     }
