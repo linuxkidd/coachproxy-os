@@ -181,6 +181,49 @@
           "28": ""
         }
       }
+    },
+
+    "_comment": "2020",
+    "Allegro_Breeze": {
+      "Default": {
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "M", "order": 10 },
+          "2": { "name": "Entry", "location": "M", "order": 5 },
+          "3": { "name": "Ceiling", "location": "PS", "order": 5 },
+          "4": { "name": "Reading", "location": "DS", "order": 5 },
+          "5": { "name": "Hall", "location": "H", "order": 20 },
+          "6": { "name": "Accent", "location": "DS", "order": 20 },
+          "7": { "name": "Accent", "location": "PS", "order": 20 },
+          "8": { "name": "Galley", "location": "G", "order": 15 },
+          "9": { "name": "Sconce", "location": "DS", "order": 20 },
+          "11": { "name": "Accent", "location": "M", "order": 20 },
+          "12": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "14": { "name": "Task", "location": "G", "order": 25 },
+          "15": { "name": "Ceiling", "location": "MB", "order": 1 },
+          "16": { "name": "Accent", "location": "BR", "order": 20 },
+          "18": { "name": "TV Accent", "location": "M", "order": 25 },
+          "22": { "name": "Porch", "location": "E", "order": 1 },
+          "28": { "name": "Ceiling", "location": "C", "order": 1 },
+          "95": { "name": "Door", "location": "E", "order": 1 }
+        },
+        "Awnings": {
+          "3": { "name": "Entry Door", "type": "day", "order": 1, "duration": 20 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 }
+        },
+        "Pump": 93,
+        "Elecheat": 23,
+        "Fuelheat": 24,
+        "ParkBrake": 1,
+        "Ignition": 1,
+        "ChassisBattery": 1,
+        "GeneratorStatus": 1,
+        "secondfurnace": 1
+      },
+      "31_BR": { },
+      "33_BR": { }
     }
   },
 
