@@ -175,6 +175,10 @@ if ($model eq 'Wayfarer') {
   push @tags, '/waterheat-label/ /aquahot-label/';
 }
 
+if (substr($model, 0, 8) eq "VanLeigh") {
+  push @tags, '/lpg/';
+}
+
 query "INSERT OR REPLACE INTO configs (key, value) VALUES('lpg', '$lpg');";
 
 ###############################################################################
@@ -412,6 +416,11 @@ if ($configs{'tvlift'} ne "true") {
     $filter .= " | if (.name == \"TV Up\") then .topic = \"3\" else . end";
     $filter .= " | if (.name == \"TV Down\") then .topic = \"3\" else . end";
     $devicedb .= create_habridge_device(9, 2, $tv_voice_name,  "lift.pl 3", 'u', 'd');
+  } elsif (grep(/^$model$/, ('VanLeigh_Vilano', 'VanLeigh_Beacon'))) {
+    # VanLeigh 5th Wheels use Different TV Lift IDs.
+      $filter .= " | if (.name == \"TV Up\") then .topic = \"4\" else . end";
+      $filter .= " | if (.name == \"TV Down\") then .topic = \"4\" else . end";
+      $devicedb .= create_habridge_device(9, 2, $tv_voice_name,  "lift.pl 4", 'u', 'd');
   } else {
     $devicedb .= create_habridge_device(9, 2, $tv_voice_name,  "lift.pl 0", 'u', 'd');
   }
