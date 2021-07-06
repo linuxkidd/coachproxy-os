@@ -390,12 +390,37 @@ my $current_template_awning = 0;
 
 # Find the awnings for this year and model, or skip the awnings section if none found.
 my $awnings_default = $json->{$year}{$model}{'Default'}{'Awnings'};
+
+# Find optional overrides for this floorplan.
+my $awnings_floorplan = $json->{$year}{$model}{$floorplan}{'Awnings'};
+
 if ($awnings_default) {
   foreach my $awning (keys %{$awnings_default}) {
     # Store the default values for this awning
     my $defaults = $awnings_default->{$awning};
     my ($name, $type, $order) = ($defaults->{'name'}, $defaults->{'type'}, $defaults->{'order'});
     my $duration = $defaults->{'duration'} // 30;
+    my $duration_extend = $defaults->{'duration_extend'} || $duration;
+    my $duration_retract = $defaults->{'duration_retract'} || $duration;
+    my $overrides = $awnings_floorplan->{$awning};
+
+    if (defined($overrides)) {
+      # Use floorplan-specific overrides for this awning
+
+      if ($overrides eq '') {
+        # Empty data provided. Delete this awning.
+        push @tags, "/awning_$awning/";
+        $name = '';
+      } else {
+        # Use the override values when present.
+        $name = $overrides->{'name'} || $name;
+        $type = $overrides->{'type'} || $type;
+        $order = $overrides->{'order'} || $order;
+        $duration = $overrides->{'duration'} || $duration;
+        $duration_extend = $overrides->{'duration_out'} || $duration_extend;
+        $duration_retract = $overrides->{'duration_retract'} || $duration_retract;
+      }
+    }
     $order *= 3;   # Each awning will have 3 elements in the UI.
 
     # Set the name, location, and order of the awning
