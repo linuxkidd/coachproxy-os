@@ -225,7 +225,107 @@
       },
       "31_BR": { },
       "33_BR": { }
+    },
+    
+    "_comment": "2020",
+    "VanLeigh_Beacon": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Reading", "location": "BR", "order": 20 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Sconce", "location": "LR", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "16": { "name": "Ceiling", "location": "FB", "order": 10 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Front", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Rear", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 33, "lidup": 34, "liddn": 35 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 28,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "39_FBB": { },
+      "42_RDB": {
+        "Awnings": {
+          "20": { "name":  "Main Awning", "duration_retract": 35 },
+          "21": { "name": "Dinette Awning", "duration_retract": 30 }
+        }
+      }
+    },
+
+    "_comment": "2020",
+    "VanLeigh_Vilano": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Reading", "location": "BR", "order": 20 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Sconce", "location": "LR", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "16": { "name": "Ceiling", "location": "FB", "order": 10 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Main Awning", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Dinette Awning", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 33, "lidup": 34, "liddn": 35 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 28,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "385_RD": {
+        "Awnings": {
+          "20": { "duration_retract": 35 },
+          "21": { "duration_retract": 30 }
+        }
+      }
     }
+
   },
 
   "2019": {
@@ -655,12 +755,67 @@
         "ParkBrake": 0,
         "Ignition": 0,
         "ChassisBattery": 0,
-        "GeneratorStatus": 1
+        "GeneratorStatus": 0
       },
-      "39_FBB": { }
-    }
-  },
+      "39_FBB": { },
+      "42_RDB": {
+        "Awnings": {
+          "20": { "name":  "Main Awning", "duration_retract": 35 },
+          "21": { "name": "Dinette Awning", "duration_retract": 30 }
+        }
+      }
+    },
 
+    "_comment": "2019",
+    "VanLeigh_Vilano": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Reading", "location": "BR", "order": 20 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Ceiling", "location": "MB", "order": 10 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Sconce", "location": "LR", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "16": { "name": "Ceiling", "location": "FB", "order": 10 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Main Awning", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Dinette Awning", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 },
+          "rear": { "fan": 33, "lidup": 34, "liddn": 35 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 28,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "385_RD": {
+        "Awnings": {
+          "20": { "duration_retract": 35 },
+          "21": { "duration_retract": 30 }
+        }
+      }
+    }
+
+  },
 
   "2018": {
     "Zephyr": {
@@ -1209,20 +1364,91 @@
         "Pump": 18,
         "Elecheat": 20,
         "Fuelheat": 19,
-        "Tankheat": 29,
+        "Tankheat": 28,
         "ParkBrake": 0,
         "Ignition": 0,
         "ChassisBattery": 0,
-        "GeneratorStatus": 1
+        "GeneratorStatus": 0
       },
       "320_GK": {
-        "8": { "name": "Sofa" },
-        "11": "",
-        "12": { "name": "Sconce" }
+        "Lights": {
+          "8": { "name": "Sofa" },
+          "11": "",
+          "12": { "name": "Sconce" }
+        }
+      },
+      "385_RD": {
+        "Lights": {
+          "2": { "name": "Reading", "location": "BR" },
+          "10": { "name":  "Ceiling", "location": "MB" },
+          "12": { "name": "Sconce", "location": "LR" }
+          },
+        "Awnings": {
+          "20": { "name":  "Main Awning", "duration_retract": 35 },
+          "21": { "name": "Dinette Awning", "duration_retract": 30 }
+        }
+      }
+    },
+
+    "_comment": "2018",
+    "VanLeigh_Beacon": {
+      "Default": {
+        "MaxDimmableLight": 4,
+        "Lights": {
+          "1": { "name": "Ceiling", "location": "BR", "order": 10 },
+          "2": { "name": "Ceiling", "location": "MB", "order": 5 },
+          "3": { "name": "Ceiling", "location": "G", "order": 5 },
+          "4": { "name": "Ceiling", "location": "LR", "order": 5 },
+          "5": { "name": "Ceiling", "location": "H", "order": 10 },
+          "6": { "name": "Island", "location": "G", "order": 10 },
+          "7": { "name": "Dinette", "location": "G", "order": 15 },
+          "8": { "name": "Right Sofa", "location": "LR", "order": 15 },
+          "9": { "name": "Counter", "location": "G", "order": 20 },
+          "10": { "name": "Reading", "location": "BR", "order": 25 },
+          "11": { "name": "Left Sofa", "location": "LR", "order": 10 },
+          "12": { "name": "Pantry", "location": "G", "order": 30 },
+          "13": { "name": "Accent", "location": "G", "order": 25 },
+          "14": { "name": "Awning", "location": "E", "order": 20 },
+          "15": { "name": "Porch", "location": "E", "order": 2 },
+          "17": { "name": "Accent", "location": "H", "order": 20 }
+        },
+        "Awnings": {
+          "20": { "name": "Bedroom Awning", "type": "day", "order": 1, "duration": 25 },
+          "21": { "name": "Living Room Awning", "type": "day", "order": 2, "duration": 25 }
+        },
+        "Vents": {
+          "galley": { "fan": 25, "lidup": 26, "liddn": 27 },
+          "mid": { "fan": 29, "lidup": 30, "liddn": 31 }
+        },
+        "Pump": 18,
+        "Elecheat": 20,
+        "Fuelheat": 19,
+        "Tankheat": 28,
+        "ParkBrake": 0,
+        "Ignition": 0,
+        "ChassisBattery": 0,
+        "GeneratorStatus": 0
+      },
+      "34_RLB": {
+        "Lights": {
+          "8": { "name": "Sofa" },
+          "11": "",
+          "12": { "name": "Sconce" }
+        }
+      },
+      "42_RDB": {
+        "Lights": {
+          "2": { "name": "Reading", "location": "BR" },
+          "10": { "name":  "Ceiling", "location": "MB" },
+          "12": { "name": "Sconce", "location": "LR" }
+        },
+        "Awnings": {
+          "20": { "name":  "Main Awning", "duration_retract": 35 },
+          "21": { "name": "Dinette Awning", "duration_retract": 30 }
+        }
       }
     }
   },
-
 
   "2017": {
     "Allegro_Bus": {
@@ -1575,7 +1801,7 @@
         "ParkBrake": 0,
         "Ignition": 0,
         "ChassisBattery": 0,
-        "GeneratorStatus": 1
+        "GeneratorStatus": 0
       },
       "365_RL": { },
       "375_FL": { }
