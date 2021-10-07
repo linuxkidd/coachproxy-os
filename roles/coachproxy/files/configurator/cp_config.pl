@@ -77,7 +77,7 @@ sub create_habridge_device {
   my ($group_id, $device_id, $name, $cmd, $on, $off, $dim) = @_;
 
   my $bridge_id = $group_id * 256 + $device_id;
-  my $unique_id = sprintf("00:17:88:5E:%02X:%02X-%02X", $group_id, $device_id, $device_id);
+  my $unique_id = sprintf("00:00:00:17:88:5E:%02X:%02X-%02X", $group_id, $device_id, $device_id);
 
   my $item = "";
   # Assume the panel lights (group 6 id 126) is always the first to be added to the list.
