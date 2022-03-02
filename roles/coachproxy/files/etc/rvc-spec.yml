@@ -63,7 +63,6 @@ API_VERSION: 1
 1FED8:
   name: GENERIC_CONFIGURATION_STATUS
   parameters:
-
     - byte: 0
       name: manufacturer code (LSB)
     - byte: 1
@@ -533,42 +532,42 @@ API_VERSION: 1
     - byte: 2
       bit: 4-5
       name: coolant level warning
-      type: bit
+      type: uint2
       values:
         00: coolant level sufficent
         01: coolant level low (shutoff)
     - byte: 2
       bit: 6-7
       name: hot water priority
-      type: bit
+      type: uint2
       values:
         00: domestic water priority
         01: heating priority
     - byte: 3
       bit: 0-1
       name: output status - burner
-      type: bit
+      type: uint2
       values:
         00: off
         01: on
     - byte: 3
       bit: 2-3
       name: output status - burner indicator
-      type: bit
+      type: uint2
       values:
         00: off
         01: on
     - byte: 3
       bit: 4-5
       name: output status - electric low
-      type: bit
+      type: uint2
       values:
         00: off
         01: on
     - byte: 3
       bit: 6-7
       name: output status - electric high
-      type: bit
+      type: uint2
       values:
         00: off
         01: on
