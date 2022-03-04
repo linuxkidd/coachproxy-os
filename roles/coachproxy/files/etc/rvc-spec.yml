@@ -418,10 +418,10 @@ API_VERSION: 1
       type: uint8
       values:
         0: off
-        1: burner
+        1: combustion
         2: electric
-        3: burner/electric (both) 
-        4: automatic
+        3: gas/electric (both) 
+        4: automatic (electric if available, otherwise combustion)
         5: test combustion (forced on)
         6: test electric (forced on)
     - byte: 2-3
@@ -445,26 +445,35 @@ API_VERSION: 1
       type: uint2
       values:
         00: off
-        01: on
+        01: burner is lit
     - byte: 6
       bit: 4-5
       name: ac element status
       type: uint2
+      values:
+        00: ac element is inactive
+        01: ac element is active
     - byte: 6
       bit: 6-7
       name: high temperature limit switch status
-      type: bit
+      type: uint2
+      values:
+        00: limit switch not tripped
+        01: limit switch tripped
     - byte: 7
       bit: 0-1
       name: failure to ignite status
       type: uint2
       values:
         00: no failure
-        01: device has failed to ignite (user intervention required)
+        01: device has failed to ignite
     - byte: 7
       bit: 2-3
       name: ac power failure status
       type: uint2
+      values:
+        00: ac power present
+        01: ac power not present
     - byte: 7
       bit: 4-5
       name: dc power failure status
@@ -489,11 +498,19 @@ API_VERSION: 1
     - byte: 1
       name: operating modes
       type: uint8
+      values:
+        0: off
+        1: combustion
+        2: electric
+        3: gas/electric (both)
+        4: automatic (electric if available, combustion otherwise)
+        5: test combustion (forced on)
+        6: test electric (forced on)
     - byte: 2-3
       name: set point temperature
       type: uint16
     - byte: 4-5
-      name: water temperature
+      name: reserved
       type: uint16
     - byte: 6
       bit: 0-3
@@ -578,7 +595,6 @@ API_VERSION: 1
       values:
         00: no overcurrent detected
         01: overcurrent detected
-        10: error
     - byte: 4
       bit: 2-3
       name: burner undercurrent status
@@ -586,7 +602,6 @@ API_VERSION: 1
       values:
         00: no undercurrent detected
         01: undercurrent detected
-        10: error
     - byte: 4
       bit: 4-5
       name: burner temperature status
@@ -594,7 +609,6 @@ API_VERSION: 1
       values:
         00: temperature normal
         01: temperature warning
-        10: error
     - byte: 4
       bit: 6-7
       name: burner input status
@@ -609,7 +623,6 @@ API_VERSION: 1
       values:
         00: no overcurrent detected
         01: overcurrent detected
-        10: error
     - byte: 5
       bit: 2-3
       name: burner indicator undercurrent status
@@ -617,7 +630,6 @@ API_VERSION: 1
       values:
         00: no undercurrent detected
         01: undercurrent detected
-        10: error
     - byte: 5
       bit: 4-5
       name: burner indicator temperature status
@@ -625,7 +637,6 @@ API_VERSION: 1
       values:
         00: temperature normal
         01: temperature warning
-        10: error
     - byte: 5
       bit: 6-7
       name: reserved
@@ -637,7 +648,6 @@ API_VERSION: 1
       values:
         00: no overcurrent detected
         01: overcurrent detected
-        10: error
     - byte: 6
       bit: 2-3
       name: electric low undercurrent status
@@ -645,7 +655,6 @@ API_VERSION: 1
       values:
         00: no undercurrent detected
         01: undercurrent detected
-        10: error
     - byte: 6
       bit: 4-5
       name: electric low temperature status
@@ -653,7 +662,6 @@ API_VERSION: 1
       values:
         00: temperature normal
         01: temperature warning
-        10: error
     - byte: 6
       bit: 6-7
       name: electric low input status
@@ -661,33 +669,30 @@ API_VERSION: 1
       values:
         00: off (inactive)
         01: on (active)
-    - byte: 6
+    - byte: 7
       bit: 0-1
-      name: electric high overcurrent status
+      name: electric high element overcurrent status
       type: uint2
       values:
         00: no overcurrent detected
         01: overcurrent detected
-        10: error
-    - byte: 6
+    - byte: 7
       bit: 2-3
-      name: electric high undercurrent status
+      name: electric high element undercurrent status
       type: uint2
       values:
         00: no undercurrent detected
         01: undercurrent detected
-        10: error
-    - byte: 6
+    - byte: 7
       bit: 4-5
-      name: electric high temperature status
+      name: electric high element temperature status
       type: uint2
       values:
         00: temperature normal
         01: temperature warning
-        10: error
-    - byte: 6
+    - byte: 7
       bit: 6-7
-      name: electric high input status
+      name: electric high element input status
       type: uint2
       values:
         00: off (inactive)
@@ -707,7 +712,6 @@ API_VERSION: 1
         0000: off
         0001: on
         0101: test (forced on)
-        1111: no change
     - byte: 1
       bit: 4-7
       name: reserved
@@ -758,7 +762,6 @@ API_VERSION: 1
       values:
         00: no overcurrent detected
         01: overcurrent detected
-        10: error
     - byte: 2
       bit: 2-3
       name: pump undercurrent status
@@ -766,7 +769,6 @@ API_VERSION: 1
       values: 
         00: no undercurrent detected
         01: undercurrent detected
-        10: error
     - byte: 2
       bit: 4-5
       name: pump temperature status
@@ -774,7 +776,6 @@ API_VERSION: 1
       values:
         00: temperature normal
         01: temperature warning
-        10: error
     - byte: 2
       bit: 6-7
       name: reserved
@@ -795,8 +796,7 @@ API_VERSION: 1
       type: unit4
       values:
         0000: off
-        0001: test (forced on)
-        1111: no change
+        0101: test (forced on)
     - byte: 1
       bit: 4-7
       name: reserved
