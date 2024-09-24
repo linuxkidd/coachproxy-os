@@ -6,7 +6,7 @@ is a rough outline of potential improvements that could benefit the
 project:
 
 * 2020 Tiffin support: Most of this could be accomplished by updating
-  the `[features.json](roles/coachproxy/files/configurator/features.json)`
+  the [features.json](roles/coachproxy/files/configurator/features.json)
   file with the correct IDs for 2020 RVs. However, some more complicated
   changes will almost certainly be needed in other files as well.
 
