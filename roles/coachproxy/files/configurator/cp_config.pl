@@ -205,6 +205,11 @@ if (substr($model, 0, 8) ne "VanLeigh" and ($year < 2018 or $model eq 'Wayfarer'
   } else {
     push @tags, '/furn1-spacer/';
   }
+  if ($configs{'frontheat'} ne 'true') {
+      push @tags, '/heatpump0/';         # Delete heat pump button
+    } else {
+      push @tags, '/heatpump0-spacer/';  # Delete heat pump spacer
+    }
   if ($configs{'midheat'} ne 'true') {
     push @tags, '/heatpump1/';         # Delete heat pump button
   } else {
